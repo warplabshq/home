@@ -223,6 +223,19 @@
             position: relative;
             padding-top: 0;
             overflow: hidden;
+            opacity: 0;
+            animation: heroFadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes heroFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero::before {
@@ -256,6 +269,19 @@
             padding: 0 20px;
             position: relative;
             z-index: 1;
+            opacity: 0;
+            animation: heroContentFadeIn 1.5s ease-out 0.3s forwards;
+        }
+
+        @keyframes heroContentFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero-logo {
@@ -264,9 +290,20 @@
             height: auto;
             margin-bottom: 40px;
             filter: invert(1) brightness(0.9);
-            opacity: 0.95;
+            opacity: 0;
             position: relative;
-            animation: subtleFloat 8s ease-in-out infinite;
+            animation: heroLogoFadeIn 1.8s ease-out 0.6s forwards, subtleFloat 8s ease-in-out 2.4s infinite;
+        }
+
+        @keyframes heroLogoFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.9);
+            }
+            100% {
+                opacity: 0.95;
+                transform: translateY(0) scale(1);
+            }
         }
 
         .hero-logo::before {
@@ -312,13 +349,36 @@
             color: #cccccc;
             margin-bottom: 40px;
             letter-spacing: 0.5px;
-            opacity: 0.8;
-            animation: subtleFloat 10s ease-in-out infinite;
-            animation-delay: 2s;
+            opacity: 0;
+            animation: heroSubtitleFadeIn 1.5s ease-out 0.9s forwards, subtleFloat 10s ease-in-out 2.4s infinite;
+        }
+
+        @keyframes heroSubtitleFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 0.8;
+                transform: translateY(0);
+            }
         }
 
         .contact-section {
             margin-top: 50px;
+            opacity: 0;
+            animation: heroContactFadeIn 1.5s ease-out 1.2s forwards;
+        }
+
+        @keyframes heroContactFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .contact-item {
@@ -851,6 +911,41 @@
             font-size: 0.9rem;
         }
 
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-social-link {
+            font-size: 0.8rem;
+            color: #666666;
+            text-decoration: none;
+            padding: 6px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            opacity: 0.6;
+        }
+
+        .footer-social-link:hover {
+            color: #999999;
+            border-color: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            opacity: 1;
+        }
+
+        .footer-social-icon {
+            font-size: 0.7rem;
+            opacity: 0.8;
+        }
+
         /* Responsive Design */
         /* Desktop Large */
         @media (max-width: 1440px) {
@@ -1018,15 +1113,15 @@
                 padding: 0 15px;
             }
 
-            .company-social {
+            .footer-social {
                 flex-direction: column;
                 gap: 12px;
                 margin-top: 20px;
             }
 
-            .company-link {
-                font-size: 0.8rem;
-                padding: 8px 12px;
+            .footer-social-link {
+                font-size: 0.75rem;
+                padding: 6px 10px;
             }
 
             .about-content {
@@ -1220,11 +1315,6 @@
                     <a href="#" class="contact-item" id="email-link" data-email="mail@priyamventures.com" aria-label="Copy email address to clipboard">
                         mail@priyamventures.com
                     </a>
-                    <nav class="company-social" role="navigation" aria-label="Social media links">
-                        <a href="https://www.linkedin.com/company/priyamventures/" target="_blank" rel="noopener noreferrer" class="company-link" aria-label="Visit Priyam Ventures LinkedIn page">💼 LinkedIn</a>
-                        <a href="https://twitter.com/priyamventures" target="_blank" rel="noopener noreferrer" class="company-link" aria-label="Visit Priyam Ventures Twitter profile">𝕏 @priyamventures</a>
-                        <a href="https://instagram.com/priyamventures" target="_blank" rel="noopener noreferrer" class="company-link" aria-label="Visit Priyam Ventures Instagram profile">📷 @priyamventures</a>
-                    </nav>
                 </div>
             </div>
         </section>
@@ -1245,7 +1335,9 @@
                             <p class="venture-description">Revolutionary technology that transforms how content creators bring their visions to life. Create stunning videos with the power of AI.</p>
                             <div class="venture-links">
                                 <a href="https://vid.ai" target="_blank" rel="noopener noreferrer" class="venture-cta" aria-label="Visit Vid.AI website">Visit Vid.AI →</a>
-                                <a href="https://instagram.com/vidaiofficial" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Vid.AI Instagram profile">@vidaiofficial</a>
+                                <a href="https://instagram.com/vidaiofficial" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Vid.AI Instagram profile">
+                                    <span class="social-icon">📷</span> @vidaiofficial
+                                </a>
                             </div>
                         </div>
                         <div class="venture-featured-image">
@@ -1262,8 +1354,12 @@
                             <p>A comprehensive portfolio of products and services for modern software development. Building cutting-edge solutions for developers and businesses worldwide.</p>
                             <div class="venture-links">
                                 <a href="https://warplabs.co" target="_blank" rel="noopener noreferrer" class="venture-cta" aria-label="Visit Warplabs website">Visit Warplabs →</a>
-                                <a href="https://instagram.com/warplabs.co" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Warplabs Instagram profile">@warplabs.co</a>
-                                <a href="https://twitter.com/warplabs_co" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Warplabs Twitter profile">@warplabs_co</a>
+                                <a href="https://instagram.com/warplabs.co" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Warplabs Instagram profile">
+                                    <span class="social-icon">📷</span> @warplabs.co
+                                </a>
+                                <a href="https://twitter.com/warplabs_co" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Warplabs Twitter profile">
+                                    <span class="social-icon">𝕏</span> @warplabs_co
+                                </a>
                             </div>
                         </article>
                     </div>
@@ -1323,6 +1419,17 @@
 
     <footer role="contentinfo">
         <div class="footer-content">
+            <nav class="footer-social" role="navigation" aria-label="Priyam Ventures social media links">
+                <a href="https://www.linkedin.com/company/priyamventures/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Visit Priyam Ventures LinkedIn page">
+                    <span class="footer-social-icon">💼</span> LinkedIn
+                </a>
+                <a href="https://twitter.com/priyamventures" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Visit Priyam Ventures Twitter profile">
+                    <span class="footer-social-icon">𝕏</span> @priyamventures
+                </a>
+                <a href="https://instagram.com/priyamventures" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Visit Priyam Ventures Instagram profile">
+                    <span class="footer-social-icon">📷</span> @priyamventures
+                </a>
+            </nav>
             <p>&copy; 2025 Priyam Ventures Private Limited. All rights reserved.</p>
             <address>📍 WeWork Vaishnavi Signature, No. 78/9, Outer Ring Road, Bellandur, Bangalore, KA</address>
         </div>
