@@ -1,18 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Priyam Ventures</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Priyam Ventures - Venture Studio</title>
+    <meta name="title" content="Priyam Ventures - Innovative Venture Studio | AI & Technology Startups">
     <meta name="description"
-        content="Priyam Ventures Private Limited, founded by Priyam Raj, is a venture studio creating innovative startups. Explore our current ventures and upcoming projects.">
+        content="Priyam Ventures Private Limited is an innovative venture studio founded by Priyam Raj, creating cutting-edge AI and technology startups. Discover our portfolio including VidAI, TubeMagic, and Burnfeed.">
     <meta name="keywords"
-        content="Priyam Raj, Priyam Ventures, Priyam Ventures Pvt Ltd, Priyam Ventures Private Limited, startups, innovation">
+        content="Priyam Raj, Priyam Ventures, venture studio, AI startups, technology ventures, VidAI, TubeMagic, Burnfeed, startup incubator, innovation lab, artificial intelligence, video AI, YouTube tools">
+    <meta name="author" content="Priyam Raj">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://priyamventures.com/">
+    <meta property="og:title" content="Priyam Ventures - Innovative Venture Studio | AI & Technology Startups">
+    <meta property="og:description"
+        content="Priyam Ventures Private Limited is an innovative venture studio founded by Priyam Raj, creating cutting-edge AI and technology startups. Discover our portfolio including VidAI, TubeMagic, and Burnfeed.">
+    <meta property="og:image" content="https://priyamventures.com/assets/dark-logo.png">
+    <meta property="og:image:alt" content="Priyam Ventures Logo">
+    <meta property="og:site_name" content="Priyam Ventures">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://priyamventures.com/">
+    <meta property="twitter:title" content="Priyam Ventures - Innovative Venture Studio | AI & Technology Startups">
+    <meta property="twitter:description"
+        content="Priyam Ventures Private Limited is an innovative venture studio founded by Priyam Raj, creating cutting-edge AI and technology startups. Discover our portfolio including VidAI, TubeMagic, and Burnfeed.">
+    <meta property="twitter:image" content="https://priyamventures.com/assets/dark-logo.png">
+    <meta property="twitter:image:alt" content="Priyam Ventures Logo">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://priyamventures.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="assets/dark-logo.png" as="image">
+
+    <!-- Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Priyam Ventures Private Limited",
+        "alternateName": "Priyam Ventures",
+        "url": "https://priyamventures.com",
+        "logo": "https://priyamventures.com/assets/dark-logo.png",
+        "description": "Priyam Ventures Private Limited is an innovative venture studio founded by Priyam Raj, creating cutting-edge AI and technology startups.",
+        "founder": {
+            "@type": "Person",
+            "name": "Priyam Raj"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "WeWork Vaishnavi Signature, No. 78/9, Outer Ring Road, Bellandur",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "addressCountry": "India"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "mail@priyamventures.com",
+            "contactType": "business"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/priyamventures/"
+        ],
+        "owns": [
+            {
+                "@type": "Organization",
+                "name": "VidAI, LLC",
+                "url": "https://vid.ai",
+                "description": "The best generative AI platform for creating videos"
+            },
+            {
+                "@type": "Organization",
+                "name": "Tube Magic, LLC",
+                "url": "https://tubemagic.com",
+                "description": "AI-powered tools built to help YouTubers scale their content creation"
+            },
+            {
+                "@type": "Organization",
+                "name": "Burnfeed",
+                "url": "https://burnfeed.app",
+                "description": "Social media feed replacement tool for desktop with inspirational quotes"
+            }
+        ]
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -1077,6 +1169,19 @@
             visibility: visible;
             transform: translateX(-50%) translateY(0);
         }
+
+        /* Accessibility - Screen reader only text */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
     </style>
 </head>
 
@@ -1104,119 +1209,122 @@
     </div>
 
 
-    <section class="hero">
-        <div class="hero-content">
-            <img src="assets/logo.png" alt="Priyam Ventures" class="hero-logo">
-            <p class="hero-subtitle">Crafting Tomorrow's Innovations Today</p>
+    <main role="main">
+        <section class="hero" role="banner">
+            <div class="hero-content">
+                <img src="assets/logo.png" alt="Priyam Ventures - Premium Venture Studio Logo" class="hero-logo">
+                <h1 class="visually-hidden">Priyam Ventures - Premium Venture Studio</h1>
+                <p class="hero-subtitle">Crafting Tomorrow's Innovations Today</p>
 
-            <div class="contact-section">
-                <a href="#" class="contact-item" id="email-link" data-email="mail@priyamventures.com">
-                    mail@priyamventures.com
-                </a>
-                <div class="company-social">
-                    <a href="https://www.linkedin.com/company/priyamventures/" target="_blank" rel="noopener noreferrer" class="company-link">💼 LinkedIn</a>
-                    <a href="https://twitter.com/priyamventures" target="_blank" rel="noopener noreferrer" class="company-link">𝕏 @priyamventures</a>
-                    <a href="https://instagram.com/priyamventures" target="_blank" rel="noopener noreferrer" class="company-link">📷 @priyamventures</a>
+                <div class="contact-section">
+                    <a href="#" class="contact-item" id="email-link" data-email="mail@priyamventures.com" aria-label="Copy email address to clipboard">
+                        mail@priyamventures.com
+                    </a>
+                    <nav class="company-social" role="navigation" aria-label="Social media links">
+                        <a href="https://www.linkedin.com/company/priyamventures/" target="_blank" rel="noopener noreferrer" class="company-link" aria-label="Visit Priyam Ventures LinkedIn page">💼 LinkedIn</a>
+                        <a href="https://twitter.com/priyamventures" target="_blank" rel="noopener noreferrer" class="company-link" aria-label="Visit Priyam Ventures Twitter profile">𝕏 @priyamventures</a>
+                        <a href="https://instagram.com/priyamventures" target="_blank" rel="noopener noreferrer" class="company-link" aria-label="Visit Priyam Ventures Instagram profile">📷 @priyamventures</a>
+                    </nav>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="ventures-section">
-        <div class="container">
-            <h2 class="section-title">Currently Venturing</h2>
-            <div class="ventures-showcase">
-                <div class="venture-featured">
-                    <div class="venture-featured-content">
-                        <div class="venture-header">
-                            <img src="assets/vidai-logo.jpeg" alt="Vid.AI Logo" class="venture-logo">
-                            <h3><a href="https://vid.ai" target="_blank" rel="noopener noreferrer">Vid.AI</a></h3>
-                        </div>
-                        <p class="venture-tagline">The best generative AI platform for creating social-media ready videos.</p>
-                        <p class="venture-stats">$900K ARR</p>
-                        <p class="venture-info">Partner Venture • Florida, USA</p>
-                        <p class="venture-description">Revolutionary technology that transforms how content creators bring their visions to life. Create stunning videos with the power of AI.</p>
-                        <div class="venture-links">
-                            <a href="https://vid.ai" target="_blank" rel="noopener noreferrer" class="venture-cta">Visit Vid.AI →</a>
-                            <a href="https://instagram.com/vidaiofficial" target="_blank" rel="noopener noreferrer" class="venture-social">@vidaiofficial</a>
-                        </div>
-                    </div>
-                    <div class="venture-featured-image">
-                        <img src="assets/vidai.avif" alt="Vid.AI Platform Screenshot" class="venture-screenshot">
-                    </div>
-                </div>
-                <div class="venture-secondary">
-                    <div class="venture-card warplabs-card">
-                        <div class="warplabs-header">
-                            <img src="assets/warplabs.png" alt="Warplabs Logo" class="warplabs-logo">
-                            <h3><a href="https://warplabs.co" target="_blank" rel="noopener noreferrer">Warplabs</a></h3>
-                        </div>
-                        <p class="venture-subtitle">Software Portfolio</p>
-                        <p>A comprehensive portfolio of products and services for modern software development. Building cutting-edge solutions for developers and businesses worldwide.</p>
-                        <div class="venture-links">
-                            <a href="https://warplabs.co" target="_blank" rel="noopener noreferrer" class="venture-cta">Visit Warplabs →</a>
-                            <a href="https://instagram.com/warplabs.co" target="_blank" rel="noopener noreferrer" class="venture-social">@warplabs.co</a>
-                            <a href="https://twitter.com/warplabs_co" target="_blank" rel="noopener noreferrer" class="venture-social">@warplabs_co</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-section">
-        <div class="container">
-            <h2 class="section-title">Behind the Vision</h2>
-            <div class="about-content">
-                <div class="photo-container">
-                    <img src="assets/priyamrajnyc.jpeg" alt="Priyam Raj" class="founder-photo">
-                </div>
-                <div class="business-card">
-                    <div class="card-content">
-                        <h3 class="founder-name">Priyam Raj</h3>
-                        <p class="founder-title">Managing Director</p>
-                        <p class="company-name">Priyam Ventures Private Limited</p>
-                        
-                        <div class="card-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Email</span>
-                                <span class="detail-value">
-                                    <a href="#" id="personal-email-link" data-email="pr@priyamventures.com" class="email-copy-link">pr@priyamventures.com</a>
-                                </span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Based in</span>
-                                <span class="detail-value">Bangalore, India</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Experience</span>
-                                <span class="detail-value">2x Startup Exits • 6 Years Industry</span>
+        <section class="ventures-section" role="region" aria-labelledby="ventures-heading">
+            <div class="container">
+                <h2 id="ventures-heading" class="section-title">Currently Venturing</h2>
+                <div class="ventures-showcase">
+                    <article class="venture-featured">
+                        <div class="venture-featured-content">
+                            <header class="venture-header">
+                                <img src="assets/vidai-logo.jpeg" alt="Vid.AI Logo" class="venture-logo">
+                                <h3><a href="https://vid.ai" target="_blank" rel="noopener noreferrer" aria-label="Visit Vid.AI - AI video generation platform">Vid.AI</a></h3>
+                            </header>
+                            <p class="venture-tagline">The best generative AI platform for creating social-media ready videos.</p>
+                            <p class="venture-stats">$900K ARR</p>
+                            <p class="venture-info">Partner Venture • Florida, USA</p>
+                            <p class="venture-description">Revolutionary technology that transforms how content creators bring their visions to life. Create stunning videos with the power of AI.</p>
+                            <div class="venture-links">
+                                <a href="https://vid.ai" target="_blank" rel="noopener noreferrer" class="venture-cta" aria-label="Visit Vid.AI website">Visit Vid.AI →</a>
+                                <a href="https://instagram.com/vidaiofficial" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Vid.AI Instagram profile">@vidaiofficial</a>
                             </div>
                         </div>
-                        
-                        <div class="card-footer">
-                            <div class="social-links">
-                                <a href="https://twitter.com/priymrj" target="_blank" rel="noopener noreferrer" class="social-link">
-                                    <span class="social-icon">𝕏</span> @priymrj
-                                </a>
-                                <a href="https://instagram.com/priymrj" target="_blank" rel="noopener noreferrer" class="social-link">
-                                    <span class="social-icon">📷</span> @priymrj
-                                </a>
-                                <a href="https://priyamraj.com" target="_blank" rel="noopener noreferrer" class="social-link">
-                                    <span class="social-icon">🌐</span> priyamraj.com
-                                </a>
-                            </div>
+                        <div class="venture-featured-image">
+                            <img src="assets/vidai.avif" alt="Vid.AI Platform Screenshot - AI video generation interface" class="venture-screenshot">
                         </div>
+                    </article>
+                    <div class="venture-secondary">
+                        <article class="venture-card warplabs-card">
+                            <header class="warplabs-header">
+                                <img src="assets/warplabs.png" alt="Warplabs Logo" class="warplabs-logo">
+                                <h3><a href="https://warplabs.co" target="_blank" rel="noopener noreferrer" aria-label="Visit Warplabs - Software development portfolio">Warplabs</a></h3>
+                            </header>
+                            <p class="venture-subtitle">Software Portfolio</p>
+                            <p>A comprehensive portfolio of products and services for modern software development. Building cutting-edge solutions for developers and businesses worldwide.</p>
+                            <div class="venture-links">
+                                <a href="https://warplabs.co" target="_blank" rel="noopener noreferrer" class="venture-cta" aria-label="Visit Warplabs website">Visit Warplabs →</a>
+                                <a href="https://instagram.com/warplabs.co" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Warplabs Instagram profile">@warplabs.co</a>
+                                <a href="https://twitter.com/warplabs_co" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Warplabs Twitter profile">@warplabs_co</a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
+        <section class="about-section" role="region" aria-labelledby="about-heading">
+            <div class="container">
+                <h2 id="about-heading" class="section-title">Behind the Vision</h2>
+                <div class="about-content">
+                    <div class="photo-container">
+                        <img src="assets/priyamrajnyc.jpeg" alt="Priyam Raj - Managing Director of Priyam Ventures" class="founder-photo">
+                    </div>
+                    <div class="business-card">
+                        <div class="card-content">
+                            <h3 class="founder-name">Priyam Raj</h3>
+                            <p class="founder-title">Managing Director</p>
+                            <p class="company-name">Priyam Ventures Private Limited</p>
+
+                            <div class="card-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Email</span>
+                                    <span class="detail-value">
+                                        <a href="#" id="personal-email-link" data-email="pr@priyamventures.com" class="email-copy-link" aria-label="Copy personal email to clipboard">pr@priyamventures.com</a>
+                                    </span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Based in</span>
+                                    <span class="detail-value">Bangalore, India</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Experience</span>
+                                    <span class="detail-value">2x Startup Exits • 6 Years Industry</span>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <nav class="social-links" role="navigation" aria-label="Priyam Raj social media links">
+                                    <a href="https://twitter.com/priymrj" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Priyam Raj Twitter profile">
+                                        <span class="social-icon">𝕏</span> @priymrj
+                                    </a>
+                                    <a href="https://instagram.com/priymrj" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Priyam Raj Instagram profile">
+                                        <span class="social-icon">📷</span> @priymrj
+                                    </a>
+                                    <a href="https://priyamraj.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Priyam Raj personal website">
+                                        <span class="social-icon">🌐</span> priyamraj.com
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
         <div class="footer-content">
             <p>&copy; 2025 Priyam Ventures Private Limited. All rights reserved.</p>
-            <p>📍 WeWork Vaishnavi Signature, No. 78/9, Outer Ring Road, Bellandur, Bangalore, KA</p>
+            <address>📍 WeWork Vaishnavi Signature, No. 78/9, Outer Ring Road, Bellandur, Bangalore, KA</address>
         </div>
     </footer>
 
