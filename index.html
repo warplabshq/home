@@ -1190,6 +1190,9 @@
             /* Reduce animations on mobile for performance */
             .hero-logo {
                 animation: none;
+                opacity: 1 !important;
+                transform: none !important;
+                filter: none !important;
             }
 
             .ventures-section::before {
@@ -1201,6 +1204,10 @@
         @media (max-width: 360px) {
             .hero-logo {
                 max-width: 200px;
+                opacity: 1 !important;
+                transform: none !important;
+                filter: none !important;
+                animation: none !important;
             }
 
             .section-title {
@@ -1235,8 +1242,8 @@
                 display: none;
             }
 
-            /* Disable all animations */
-            *, *::before, *::after {
+            /* Disable all animations except hero logo */
+            *:not(.hero-logo), *:not(.hero-logo)::before, *:not(.hero-logo)::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
