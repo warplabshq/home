@@ -289,16 +289,15 @@
             width: 100%;
             height: auto;
             margin-bottom: 40px;
-            filter: invert(1) brightness(0.9);
             opacity: 0;
             position: relative;
-            animation: heroLogoFadeIn 1.8s ease-out 0.6s forwards, subtleFloat 8s ease-in-out 2.4s infinite;
+            animation: heroLogoFadeIn 1.2s ease-out forwards, subtleFloat 8s ease-in-out 2s infinite;
         }
 
         @keyframes heroLogoFadeIn {
             0% {
                 opacity: 0;
-                transform: translateY(30px) scale(0.9);
+                transform: translateY(20px) scale(0.95);
             }
             100% {
                 opacity: 0.95;
@@ -462,6 +461,8 @@
             padding: 50px;
             backdrop-filter: blur(20px) saturate(180%);
             transition: border-color 0.3s ease;
+            overflow-x: hidden;
+            word-wrap: break-word;
         }
 
         .founder-name {
@@ -1038,7 +1039,9 @@
             }
 
             .about-content {
+                grid-template-columns: 1fr;
                 gap: 40px;
+                text-align: center;
             }
 
             .founder-photo {
@@ -1125,8 +1128,10 @@
             }
 
             .about-content {
+                grid-template-columns: 1fr;
                 gap: 30px;
                 padding: 0 10px;
+                text-align: center;
             }
 
             .founder-photo {
@@ -1135,7 +1140,10 @@
             }
 
             .business-card {
-                padding: 30px 20px;
+                padding: 20px 15px;
+                margin: 0 10px;
+                max-width: calc(100vw - 40px);
+                box-sizing: border-box;
             }
 
             .founder-name {
@@ -1157,6 +1165,21 @@
             .social-link {
                 padding: 8px 15px;
                 font-size: 0.85rem;
+            }
+
+            .detail-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .detail-label {
+                font-size: 0.8rem;
+            }
+
+            .detail-value {
+                font-size: 0.9rem;
+                word-break: break-word;
             }
 
             /* Hide more particles on mobile */
@@ -1199,6 +1222,12 @@
 
             .founder-name {
                 font-size: 1.6rem;
+            }
+
+            .business-card {
+                padding: 15px 10px;
+                margin: 0 5px;
+                max-width: calc(100vw - 30px);
             }
 
             /* Hide all particles on very small screens */
@@ -1307,7 +1336,7 @@
     <main role="main">
         <section class="hero" role="banner">
             <div class="hero-content">
-                <img src="assets/logo.png" alt="Priyam Ventures - Premium Venture Studio Logo" class="hero-logo">
+                <img src="assets/dark-logo.png?v=2" alt="Priyam Ventures - Premium Venture Studio Logo" class="hero-logo">
                 <h1 class="visually-hidden">Priyam Ventures - Premium Venture Studio</h1>
                 <p class="hero-subtitle">Crafting Tomorrow's Innovations Today</p>
 
@@ -1441,18 +1470,7 @@
             // Create more particles dynamically
             const backgroundContainer = document.querySelector('.background-container');
 
-            // Add subtle breathing animation to logo glow
-            const heroLogo = document.querySelector('.hero-logo');
-            
-            // Create a subtle pulsing effect
-            setInterval(() => {
-                if (!heroLogo.matches(':hover')) {
-                    heroLogo.style.filter = 'invert(1) brightness(0.95)';
-                    setTimeout(() => {
-                        heroLogo.style.filter = 'invert(1) brightness(0.9)';
-                    }, 2000);
-                }
-            }, 4000);
+            // Logo stays clean without any filters
 
             // Email copy to clipboard functionality
             const emailLink = document.getElementById('email-link');
