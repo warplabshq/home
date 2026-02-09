@@ -162,9 +162,9 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #000000;
+            background: #0b0b0b;
             color: #ffffff;
-            line-height: 1.6;
+            line-height: 1.5;
             overflow-x: hidden;
         }
 
@@ -197,8 +197,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: luxuryShimmer 6s ease-in-out infinite;
+            background: rgba(255, 255, 255, 0.08);
         }
 
         @keyframes float {
@@ -244,30 +243,9 @@
             }
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 20%;
-            left: 20%;
-            width: 60%;
-            height: 60%;
-            border-radius: 50%;
-            animation: heroAura 15s ease-in-out infinite;
-            z-index: -1;
-        }
-
+        .hero::before,
         .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
-            animation: heroBreathing 20s ease-in-out infinite;
-            z-index: -1;
+            content: none;
         }
 
         .hero-content {
@@ -291,19 +269,19 @@
         }
 
         .hero-logo {
-            max-width: 500px;
+            max-width: 320px;
             width: 100%;
             height: auto;
-            margin-bottom: 40px;
+            margin-bottom: 28px;
             opacity: 0;
             position: relative;
-            animation: heroLogoFadeIn 1.2s ease-out forwards, subtleFloat 8s ease-in-out 2s infinite;
+            animation: heroLogoFadeIn 1.1s ease-out forwards;
         }
 
         @keyframes heroLogoFadeIn {
             0% {
                 opacity: 0;
-                transform: translateY(20px) scale(0.95);
+                transform: translateY(18px) scale(0.98);
             }
             100% {
                 opacity: 0.95;
@@ -311,51 +289,18 @@
             }
         }
 
-        .hero-logo::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 120%;
-            height: 120%;
-            background: radial-gradient(ellipse, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 40%, transparent 70%);
-            border-radius: 50%;
-            animation: glowPulse 12s ease-in-out infinite;
-            pointer-events: none;
-            z-index: -1;
-        }
-
+        .hero-logo::before,
         .hero-logo::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.06) 50%, transparent 70%);
-            animation: luxuryShimmer 8s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-        @keyframes glowPulse {
-            0%, 100% { 
-                opacity: 0.4; 
-                transform: translate(-50%, -50%) scale(1);
-            }
-            50% { 
-                opacity: 0.8; 
-                transform: translate(-50%, -50%) scale(1.1);
-            }
+            content: none;
         }
 
         .hero-subtitle {
-            font-size: 1.2rem;
-            color: #cccccc;
-            margin-bottom: 40px;
-            letter-spacing: 0.5px;
+            font-size: 1rem;
+            color: #b5b5b5;
+            margin-bottom: 32px;
+            letter-spacing: 0.2px;
             opacity: 0;
-            animation: heroSubtitleFadeIn 1.5s ease-out 0.9s forwards, subtleFloat 10s ease-in-out 2.4s infinite;
+            animation: heroSubtitleFadeIn 1.3s ease-out 0.7s forwards;
         }
 
         @keyframes heroSubtitleFadeIn {
@@ -370,9 +315,9 @@
         }
 
         .contact-section {
-            margin-top: 50px;
+            margin-top: 36px;
             opacity: 0;
-            animation: heroContactFadeIn 1.5s ease-out 1.2s forwards;
+            animation: heroContactFadeIn 1.3s ease-out 1s forwards;
         }
 
         @keyframes heroContactFadeIn {
@@ -388,57 +333,49 @@
 
         .contact-item {
             display: inline-block;
-            margin: 0 15px;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 30px;
+            margin: 0 12px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
             text-decoration: none;
-            color: #ffffff;
-            backdrop-filter: blur(15px);
+            color: #f2f2f2;
             position: relative;
             overflow: hidden;
-            font-size: 0.9rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.2px;
         }
 
         .contact-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
-            animation: luxuryShimmer 12s ease-in-out infinite;
+            content: none;
         }
 
         .contact-item:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         /* Ventures Section */
         .ventures-section {
-            padding: 100px 0;
-            background: linear-gradient(180deg, #000000 0%, #111111 100%);
+            padding: 80px 0;
+            background: #0f0f0f;
             position: relative;
         }
 
         /* About Section */
         .about-section {
-            padding: 120px 0;
-            background: linear-gradient(180deg, #111111 0%, #000000 100%);
+            padding: 90px 0;
+            background: #0b0b0b;
             position: relative;
         }
 
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
-            gap: 80px;
+            gap: 60px;
             align-items: center;
-            margin-top: 60px;
+            margin-top: 50px;
         }
 
         .photo-container {
@@ -448,11 +385,11 @@
         }
 
         .founder-photo {
-            width: 450px;
-            height: 550px;
+            width: 400px;
+            height: 500px;
             object-fit: cover;
-            border-radius: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: border-color 0.3s ease;
         }
 
@@ -461,11 +398,10 @@
         }
 
         .business-card {
-            background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(38, 38, 38, 0.9) 50%, rgba(24, 24, 24, 0.95) 100%);
+            background: #121212;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 25px;
-            padding: 50px;
-            backdrop-filter: blur(20px) saturate(180%);
+            border-radius: 18px;
+            padding: 40px;
             transition: border-color 0.3s ease;
             overflow-x: hidden;
             word-wrap: break-word;
@@ -473,26 +409,26 @@
 
         .founder-name {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2.1rem;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
         }
 
         .founder-title {
-            font-size: 1.2rem;
-            color: #cccccc;
-            margin-bottom: 8px;
+            font-size: 1.05rem;
+            color: #c2c2c2;
+            margin-bottom: 6px;
             font-weight: 500;
         }
 
         .company-name {
-            font-size: 1rem;
-            color: #999999;
-            margin-bottom: 40px;
+            font-size: 0.95rem;
+            color: #9a9a9a;
+            margin-bottom: 28px;
             font-weight: 400;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
         }
 
         .card-details {
@@ -547,14 +483,13 @@
         }
 
         .social-link {
-            font-size: 0.9rem;
-            color: #cccccc;
+            font-size: 0.85rem;
+            color: #c7c7c7;
             text-decoration: none;
-            padding: 8px 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
+            padding: 6px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.02);
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
@@ -633,50 +568,49 @@
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
             color: #ffffff;
             position: relative;
+            letter-spacing: -0.2px;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -20px;
+            bottom: -16px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
+            width: 80px;
             height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: luxuryShimmer 4s ease-in-out infinite;
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .ventures-showcase {
-            margin-top: 80px;
+            margin-top: 60px;
         }
 
         .venture-featured {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
-            gap: 60px;
+            gap: 50px;
             align-items: center;
-            margin-bottom: 80px;
-            padding: 50px;
-            background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(35, 35, 35, 0.85) 50%, rgba(25, 25, 25, 0.9) 100%);
-            border-radius: 30px;
+            margin-bottom: 70px;
+            padding: 40px;
+            background: #121212;
+            border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(20px) saturate(180%);
             transition: border-color 0.3s ease;
         }
 
         .venture-featured:hover {
-            border-color: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.18);
         }
 
         .venture-featured-content h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 1.75rem;
             margin-bottom: 0;
             font-weight: 700;
         }
@@ -696,19 +630,19 @@
         }
 
         .venture-tagline {
-            font-size: 1.1rem;
-            color: #999999;
-            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #a8a8a8;
+            margin-bottom: 8px;
             font-weight: 400;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.2px;
         }
 
         .venture-stats {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 15px;
-            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
             position: relative;
             display: inline-block;
         }
@@ -716,19 +650,19 @@
         .venture-stats::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -8px;
             left: 0;
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .venture-info {
-            font-size: 0.85rem;
-            color: #666666;
-            margin-bottom: 20px;
-            font-weight: 500;
-            letter-spacing: 1px;
+            font-size: 0.8rem;
+            color: #6f6f6f;
+            margin-bottom: 18px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
         }
 
@@ -745,35 +679,35 @@
         }
 
         .venture-description {
-            font-size: 0.95rem;
-            color: #999999;
+            font-size: 0.92rem;
+            color: #a1a1a1;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .venture-cta {
             display: inline-block;
-            padding: 14px 35px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50px;
+            padding: 10px 22px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 10px;
             color: #ffffff;
             text-decoration: none;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: all 0.4s ease;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            transition: all 0.3s ease;
         }
 
         .venture-cta:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.08);
             border-color: rgba(255, 255, 255, 0.4);
         }
 
         .venture-featured-image {
             position: relative;
             overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border-radius: 16px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
         }
 
         .venture-screenshot {
@@ -799,31 +733,17 @@
 
         .warplabs-logo,
         .venture-logo {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             object-fit: cover;
-            filter: brightness(0.9);
+            filter: brightness(0.95);
             border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             flex-shrink: 0;
         }
 
-        .warplabs-logo {
-            animation: prismRotate 20s linear infinite;
-            position: relative;
-        }
-
         .warplabs-logo::after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            border-radius: 50%;
-            background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: prismRotate 15s linear infinite reverse;
-            z-index: -1;
+            content: none;
         }
 
 
@@ -835,12 +755,12 @@
         }
 
         .venture-subtitle {
-            font-size: 0.9rem;
-            color: #666666;
+            font-size: 0.85rem;
+            color: #6f6f6f;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            font-weight: 500;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+            font-weight: 600;
         }
 
         .venture-links {
@@ -852,15 +772,14 @@
         }
 
         .venture-social {
-            font-size: 0.9rem;
-            color: #999999;
+            font-size: 0.85rem;
+            color: #a5a5a5;
             text-decoration: none;
             transition: all 0.3s ease;
-            padding: 8px 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            padding: 6px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.03);
         }
 
         .venture-social:hover {
@@ -870,11 +789,10 @@
         }
 
         .venture-card {
-            background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(32, 32, 32, 0.85) 50%, rgba(22, 22, 22, 0.9) 100%);
-            padding: 50px;
+            background: #121212;
+            padding: 36px;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            backdrop-filter: blur(20px) saturate(180%);
+            border-radius: 16px;
             transition: border-color 0.3s ease;
         }
 
@@ -884,8 +802,8 @@
 
         .venture-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 1.6rem;
+            margin-bottom: 16px;
             color: #ffffff;
         }
 
@@ -900,8 +818,8 @@
         }
 
         .venture-card p {
-            color: #cccccc;
-            font-size: 1.1rem;
+            color: #bdbdbd;
+            font-size: 1rem;
             line-height: 1.6;
         }
 
@@ -961,7 +879,7 @@
             }
 
             .hero-logo {
-                max-width: 450px;
+                max-width: 300px;
             }
         }
 
@@ -972,7 +890,7 @@
             }
 
             .hero-logo {
-                max-width: 400px;
+                max-width: 280px;
             }
 
             .section-title {
@@ -1008,7 +926,7 @@
             }
 
             .hero-logo {
-                max-width: 300px;
+                max-width: 240px;
             }
 
                          .contact-item {
@@ -1068,7 +986,7 @@
             }
 
             .hero-logo {
-                max-width: 250px;
+                max-width: 200px;
             }
 
             .section-title {
@@ -1209,7 +1127,7 @@
         /* Very small mobile */
         @media (max-width: 360px) {
             .hero-logo {
-                max-width: 200px;
+                max-width: 170px;
                 opacity: 1 !important;
                 transform: none !important;
                 filter: none !important;
@@ -1351,7 +1269,7 @@
             <div class="hero-content">
                 <img src="assets/dark-logo.png?v=2" alt="Priyam Ventures - Premium Venture Studio Logo" class="hero-logo">
                 <h1 class="visually-hidden">Priyam Ventures - Premium Venture Studio</h1>
-                <p class="hero-subtitle">Crafting Tomorrow's Innovations Today</p>
+                <p class="hero-subtitle">Building durable, profitable software ventures.</p>
 
                 <div class="contact-section">
                     <a href="#" class="contact-item" id="email-link" data-email="mail@priyamventures.com" aria-label="Copy email address to clipboard">
@@ -1374,7 +1292,7 @@
                             <p class="venture-tagline">The best generative AI platform for creating social-media ready videos.</p>
                             <p class="venture-stats">$1M ARR</p>
                             <p class="venture-info">Partner Venture • Florida, USA</p>
-                            <p class="venture-description">Revolutionary technology that transforms how content creators bring their visions to life. Create stunning videos with the power of AI.</p>
+                            <p class="venture-description">AI video platform helping creators and teams ship social-ready content at scale.</p>
                             <div class="venture-links">
                                 <a href="https://vid.ai" target="_blank" rel="noopener noreferrer" class="venture-cta" aria-label="Visit Vid.AI website">Visit Vid.AI →</a>
                                 <a href="https://instagram.com/vidaiofficial" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Vid.AI Instagram profile">
@@ -1417,7 +1335,7 @@
                                 <h3><a href="https://warplabs.co" target="_blank" rel="noopener noreferrer" aria-label="Visit Warplabs - Software development portfolio">Warplabs</a></h3>
                             </header>
                             <p class="venture-subtitle">Software Portfolio</p>
-                            <p>A comprehensive portfolio of products and services for modern software development. Building cutting-edge solutions for developers and businesses worldwide.</p>
+                            <p>Software studio delivering focused products and services for modern teams.</p>
                             <div class="venture-links">
                                 <a href="https://warplabs.co" target="_blank" rel="noopener noreferrer" class="venture-cta" aria-label="Visit Warplabs website">Visit Warplabs →</a>
                                 <a href="https://instagram.com/warplabs.co" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Warplabs Instagram profile">
