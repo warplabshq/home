@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>Priyam Ventures - Venture Studio</title>
-    <meta name="title" content="Priyam Ventures - Innovative Venture Studio | AI & Technology Startups">
+    <title>Priyam Ventures. An internet company.</title>
+    <meta name="title" content="Priyam Ventures. An internet company.">
     <meta name="description"
-        content="Priyam Ventures Private Limited is an innovative venture studio founded by Priyam Raj, creating cutting-edge AI and technology startups. Discover our portfolio including VidAI, moonn, TubeMagic, and Burnfeed.">
+        content="Priyam Ventures is an internet company founded by Priyam Raj. Home to Vid.AI, moonn, TubeMagic, and Warplabs. Products used by the teams behind HBO, Disney, MrBeast, and Sidemen.">
     <meta name="keywords"
-        content="Priyam Raj, Priyam Ventures, venture studio, AI startups, technology ventures, VidAI, moonn, TubeMagic, Burnfeed, startup incubator, innovation lab, artificial intelligence, video AI, YouTube tools">
+        content="Priyam Raj, Priyam Ventures, internet company, AI startups, technology ventures, VidAI, moonn, TubeMagic, Warplabs, artificial intelligence, video AI, YouTube tools">
     <meta name="author" content="Priyam Raj">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -20,9 +20,9 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://priyamventures.com/">
-    <meta property="og:title" content="Priyam Ventures - Innovative Venture Studio | AI & Technology Startups">
+    <meta property="og:title" content="Priyam Ventures. An internet company.">
     <meta property="og:description"
-        content="Priyam Ventures Private Limited is an innovative venture studio founded by Priyam Raj, creating cutting-edge AI and technology startups. Discover our portfolio including VidAI, moonn, TubeMagic, and Burnfeed.">
+        content="Priyam Ventures is an internet company founded by Priyam Raj. Home to Vid.AI, moonn, TubeMagic, and Warplabs. Products used by the teams behind HBO, Disney, MrBeast, and Sidemen.">
     <meta property="og:image" content="https://priyamventures.com/assets/dark-logo.png">
     <meta property="og:image:alt" content="Priyam Ventures Logo">
     <meta property="og:site_name" content="Priyam Ventures">
@@ -31,9 +31,9 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://priyamventures.com/">
-    <meta property="twitter:title" content="Priyam Ventures - Innovative Venture Studio | AI & Technology Startups">
+    <meta property="twitter:title" content="Priyam Ventures. An internet company.">
     <meta property="twitter:description"
-        content="Priyam Ventures Private Limited is an innovative venture studio founded by Priyam Raj, creating cutting-edge AI and technology startups. Discover our portfolio including VidAI, moonn, TubeMagic, and Burnfeed.">
+        content="Priyam Ventures is an internet company founded by Priyam Raj. Home to Vid.AI, moonn, TubeMagic, and Warplabs. Products used by the teams behind HBO, Disney, MrBeast, and Sidemen.">
     <meta property="twitter:image" content="https://priyamventures.com/assets/dark-logo.png">
     <meta property="twitter:image:alt" content="Priyam Ventures Logo">
 
@@ -46,12 +46,12 @@
     <link rel="apple-touch-icon" href="assets/logo.png">
 
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     <link rel="preload" href="assets/dark-logo.png" as="image">
 
     <!-- Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Structured Data -->
@@ -63,7 +63,7 @@
         "alternateName": "Priyam Ventures",
         "url": "https://priyamventures.com",
         "logo": "https://priyamventures.com/assets/dark-logo.png",
-        "description": "Priyam Ventures Private Limited is an innovative venture studio founded by Priyam Raj, creating cutting-edge AI and technology startups.",
+        "description": "Priyam Ventures Private Limited is an internet company founded by Priyam Raj. Home to Vid.AI, moonn, TubeMagic, and Warplabs.",
         "founder": {
             "@type": "Person",
             "name": "Priyam Raj"
@@ -104,9 +104,9 @@
             },
             {
                 "@type": "Organization",
-                "name": "Burnfeed",
-                "url": "https://burnfeed.app",
-                "description": "Social media feed replacement tool for desktop with inspirational quotes"
+                "name": "Warplabs",
+                "url": "https://warplabs.co",
+                "description": "The best dev partner for creators"
             }
         ]
     }
@@ -162,9 +162,9 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #0b0b0b;
+            background: #000000;
             color: #ffffff;
-            line-height: 1.5;
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
@@ -197,7 +197,8 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: rgba(255, 255, 255, 0.08);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: luxuryShimmer 6s ease-in-out infinite;
         }
 
         @keyframes float {
@@ -243,9 +244,30 @@
             }
         }
 
-        .hero::before,
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+            animation: heroAura 15s ease-in-out infinite;
+            z-index: -1;
+        }
+
         .hero::after {
-            content: none;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+            animation: heroBreathing 20s ease-in-out infinite;
+            z-index: -1;
         }
 
         .hero-content {
@@ -268,20 +290,65 @@
             }
         }
 
+        .hero-logo-wrap {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 28px;
+            animation: subtleFloat 8s ease-in-out 2s infinite;
+        }
+
+        .hero-logo-wrap::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 130%;
+            height: 140%;
+            background: radial-gradient(ellipse, rgba(255, 255, 255, 0.10) 0%, rgba(190, 205, 255, 0.035) 45%, transparent 72%);
+            border-radius: 50%;
+            animation: glowPulse 12s ease-in-out infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Slow iridescent ambient halo, soft and blurred */
+        .hero-logo-wrap::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 155%;
+            height: 185%;
+            background: conic-gradient(from 0deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(140, 170, 255, 0.07) 22%,
+                rgba(255, 255, 255, 0) 45%,
+                rgba(200, 160, 255, 0.07) 68%,
+                rgba(255, 255, 255, 0) 90%);
+            border-radius: 50%;
+            filter: blur(34px);
+            opacity: 0.75;
+            animation: prismRotate 26s linear infinite;
+            pointer-events: none;
+            z-index: -2;
+        }
+
         .hero-logo {
-            max-width: 320px;
+            display: block;
+            max-width: 340px;
             width: 100%;
             height: auto;
-            margin-bottom: 28px;
             opacity: 0;
-            position: relative;
-            animation: heroLogoFadeIn 1.1s ease-out forwards;
+            filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.16)) drop-shadow(0 2px 12px rgba(150, 175, 255, 0.08));
+            animation: heroLogoFadeIn 1.2s ease-out forwards;
         }
 
         @keyframes heroLogoFadeIn {
             0% {
                 opacity: 0;
-                transform: translateY(18px) scale(0.98);
+                transform: translateY(20px) scale(0.95);
             }
             100% {
                 opacity: 0.95;
@@ -289,18 +356,53 @@
             }
         }
 
-        .hero-logo::before,
-        .hero-logo::after {
-            content: none;
+        /* Sheen sweep, masked to the logo pixels only */
+        .hero-logo-shine {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(110deg, transparent 42%, rgba(255, 255, 255, 0.45) 50%, transparent 58%);
+            background-size: 220% 100%;
+            background-repeat: no-repeat;
+            background-position: 180% 0;
+            -webkit-mask-image: url('assets/dark-logo.png?v=2');
+            mask-image: url('assets/dark-logo.png?v=2');
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            animation: logoSheen 9s ease-in-out 2.5s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes logoSheen {
+            0% { background-position: 180% 0; }
+            40% { background-position: -80% 0; }
+            100% { background-position: -80% 0; }
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { 
+                opacity: 0.4; 
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% { 
+                opacity: 0.8; 
+                transform: translate(-50%, -50%) scale(1.1);
+            }
         }
 
         .hero-subtitle {
             font-size: 1rem;
-            color: #b5b5b5;
+            color: #cccccc;
             margin-bottom: 32px;
-            letter-spacing: 0.2px;
+            letter-spacing: 0.4px;
             opacity: 0;
-            animation: heroSubtitleFadeIn 1.3s ease-out 0.7s forwards;
+            animation: heroSubtitleFadeIn 1.5s ease-out 0.9s forwards, subtleFloat 10s ease-in-out 2.4s infinite;
         }
 
         @keyframes heroSubtitleFadeIn {
@@ -314,249 +416,315 @@
             }
         }
 
-        .contact-section {
-            margin-top: 36px;
-            opacity: 0;
-            animation: heroContactFadeIn 1.3s ease-out 1s forwards;
-        }
-
-        @keyframes heroContactFadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .contact-item {
-            display: inline-block;
-            margin: 0 12px;
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            text-decoration: none;
-            color: #f2f2f2;
+        /* Trusted-by Logo Wall */
+        .logos-section {
+            padding: 64px 0 56px;
+            background: #000000;
             position: relative;
             overflow: hidden;
-            font-size: 0.85rem;
+        }
+
+        .logos-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: luxuryShimmer 6s ease-in-out infinite;
+        }
+
+        .logos-eyebrow {
+            text-align: center;
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #888888;
+            margin-bottom: 40px;
             font-weight: 500;
+        }
+
+        .logos-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 36px 52px;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .logos-row img {
+            height: 26px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
+            filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 0 12px rgba(255, 255, 255, 0));
+            opacity: 0.55;
+            transition: opacity 0.4s ease, transform 0.4s ease, filter 0.4s ease;
+        }
+
+        .logos-row img:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+            filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 0 14px rgba(255, 255, 255, 0.35));
+        }
+
+        @media (max-width: 768px) {
+            .logos-section {
+                padding: 48px 0 40px;
+            }
+            .logos-row {
+                gap: 26px 36px;
+            }
+            .logos-row img {
+                height: 20px;
+            }
+        }
+
+        /* Holdings ledger */
+        .holdings {
+            list-style: none;
+            margin: 0 auto;
+            max-width: 680px;
+        }
+
+        .holdings li {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .holdings li:last-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .holding-row {
+            display: grid;
+            grid-template-columns: 40px 1fr auto 16px;
+            align-items: center;
+            gap: 18px;
+            padding: 18px 10px;
+            text-decoration: none;
+            transition: background 0.35s ease;
+        }
+
+        .holding-row:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .holding-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            filter: brightness(0.95);
+        }
+
+        .holding-info {
+            min-width: 0;
+        }
+
+        .holding-name {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
             letter-spacing: 0.2px;
         }
 
-        .contact-item::before {
-            content: none;
+        /* Warplabs wordmark matches the live warplabs.co brand: bold sans */
+        .holding-name-warplabs {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: -0.02em;
+            font-size: 1.1rem;
         }
 
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.2);
+        .holding-desc {
+            display: block;
+            font-size: 0.8rem;
+            color: #8a8a8a;
+            margin-top: 1px;
+        }
+
+        .holding-stat {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #b5b5b5;
+            white-space: nowrap;
+        }
+
+        .holding-arrow {
+            color: #555555;
+            font-size: 0.9rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .holding-row:hover .holding-arrow {
+            color: #ffffff;
+            transform: translate(2px, -2px);
+        }
+
+        .holding-row:hover .holding-stat {
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .holding-row {
+                grid-template-columns: 32px 1fr auto;
+                gap: 14px;
+                padding: 15px 6px;
+            }
+
+            .holding-logo {
+                width: 30px;
+                height: 30px;
+            }
+
+            .holding-name {
+                font-size: 1.05rem;
+            }
+
+            .holding-arrow {
+                display: none;
+            }
+        }
+
+        /* Scroll reveal (class added via JS, progressive enhancement) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Ventures Section */
         .ventures-section {
             padding: 80px 0;
-            background: #0f0f0f;
+            background: linear-gradient(180deg, #000000 0%, #111111 100%);
             position: relative;
         }
 
         /* About Section */
         .about-section {
-            padding: 90px 0;
-            background: #0b0b0b;
+            padding: 88px 0;
+            background: linear-gradient(180deg, #111111 0%, #000000 100%);
             position: relative;
         }
 
+        /* Founder row, same ledger grid as Holdings for consistency */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
+            grid-template-columns: 40px 1fr auto 16px;
             align-items: center;
-            margin-top: 50px;
+            gap: 18px;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 18px 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            text-decoration: none;
+            transition: background 0.35s ease;
         }
 
-        .photo-container {
-            position: relative;
-            display: flex;
-            justify-content: center;
+        .about-content:hover {
+            background: rgba(255, 255, 255, 0.03);
         }
 
         .founder-photo {
-            width: 400px;
-            height: 500px;
+            width: 36px;
+            height: 36px;
             object-fit: cover;
-            border-radius: 16px;
+            object-position: center 20%;
+            border-radius: 50%;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: border-color 0.3s ease;
+            filter: brightness(0.95);
         }
 
-        .founder-photo:hover {
-            border-color: rgba(255, 255, 255, 0.15);
-        }
-
-        .business-card {
-            background: #121212;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 18px;
-            padding: 40px;
-            transition: border-color 0.3s ease;
-            overflow-x: hidden;
-            word-wrap: break-word;
+        .founder-info {
+            min-width: 0;
         }
 
         .founder-name {
+            display: block;
             font-family: 'Playfair Display', serif;
-            font-size: 2.1rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 8px;
-            letter-spacing: -0.3px;
+            letter-spacing: 0.2px;
         }
 
         .founder-title {
-            font-size: 1.05rem;
-            color: #c2c2c2;
-            margin-bottom: 6px;
-            font-weight: 500;
-        }
-
-        .company-name {
-            font-size: 0.95rem;
-            color: #9a9a9a;
-            margin-bottom: 28px;
-            font-weight: 400;
-            letter-spacing: 0.3px;
-        }
-
-        .card-details {
-            margin-bottom: 40px;
-        }
-
-        .detail-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .detail-label {
-            font-size: 0.9rem;
-            color: #666666;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 500;
-        }
-
-        .detail-value {
-            font-size: 1rem;
-            color: #ffffff;
-            font-weight: 400;
-        }
-
-        .email-copy-link {
-            color: #ffffff;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .email-copy-link:hover {
-            color: #cccccc;
-        }
-
-        .card-footer {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .social-link {
-            font-size: 0.85rem;
-            color: #c7c7c7;
-            text-decoration: none;
-            padding: 6px 14px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.02);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .social-link:hover {
-            color: #ffffff;
-            border-color: rgba(255, 255, 255, 0.3);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .social-icon {
+            display: block;
             font-size: 0.8rem;
-            opacity: 0.8;
+            color: #8a8a8a;
+            margin-top: 1px;
         }
 
-        .company-social {
-            display: flex;
-            gap: 8px;
-            margin-top: 15px;
-            justify-content: center;
+        /* Blue link out to priyamraj.com */
+        .founder-link-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            color: #6ea8ff;
+            white-space: nowrap;
+            transition: color 0.3s ease;
         }
 
-        .company-link {
-            font-size: 0.75rem;
+        .founder-arrow {
+            color: #6ea8ff;
+            font-size: 0.9rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .about-content:hover .founder-link-label {
+            color: #9cc4ff;
+        }
+
+        .about-content:hover .founder-arrow {
+            color: #9cc4ff;
+            transform: translate(2px, -2px);
+        }
+
+        .team-hint {
+            max-width: 680px;
+            margin: 16px auto 0;
+            padding: 0 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
             color: #666666;
-            text-decoration: none;
-            padding: 4px 8px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.02);
-            transition: all 0.3s ease;
-            opacity: 0.6;
-        }
-
-        .company-link:hover {
-            color: #999999;
-            background: rgba(255, 255, 255, 0.05);
-            opacity: 1;
-        }
-
-        .tagline {
-            font-style: italic;
-            color: #999999;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
         }
 
         /* About Section Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .about-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
-                text-align: center;
+                grid-template-columns: 32px 1fr auto;
+                gap: 14px;
+                padding: 15px 6px;
             }
 
             .founder-photo {
-                width: 280px;
-                height: 360px;
-            }
-
-            .business-card {
-                padding: 40px 30px;
+                width: 30px;
+                height: 30px;
             }
 
             .founder-name {
-                font-size: 2rem;
+                font-size: 1.05rem;
+            }
+
+            .founder-arrow {
+                display: none;
             }
         }
 
@@ -568,49 +736,51 @@
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 56px;
             color: #ffffff;
             position: relative;
-            letter-spacing: -0.2px;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -16px;
+            bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
+            width: 100px;
             height: 2px;
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: luxuryShimmer 4s ease-in-out infinite;
         }
 
         .ventures-showcase {
-            margin-top: 60px;
+            margin-top: 56px;
         }
 
         .venture-featured {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
-            gap: 50px;
+            gap: 44px;
             align-items: center;
-            margin-bottom: 70px;
-            padding: 40px;
-            background: #121212;
-            border-radius: 20px;
+            margin-bottom: 60px;
+            padding: 36px 40px;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(35, 35, 35, 0.85) 50%, rgba(25, 25, 25, 0.9) 100%);
+            border-radius: 22px;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: border-color 0.3s ease;
+            backdrop-filter: blur(20px) saturate(180%);
+            transition: border-color 0.3s ease, box-shadow 0.45s ease;
         }
 
         .venture-featured:hover {
-            border-color: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 44px rgba(255, 255, 255, 0.06);
         }
 
         .venture-featured-content h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.75rem;
+            font-size: 1.7rem;
             margin-bottom: 0;
             font-weight: 700;
         }
@@ -631,18 +801,18 @@
 
         .venture-tagline {
             font-size: 1rem;
-            color: #a8a8a8;
-            margin-bottom: 8px;
+            color: #999999;
+            margin-bottom: 10px;
             font-weight: 400;
-            letter-spacing: 0.2px;
+            letter-spacing: 0.3px;
         }
 
         .venture-stats {
             font-size: 1.4rem;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 12px;
-            letter-spacing: -0.3px;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
             position: relative;
             display: inline-block;
         }
@@ -650,19 +820,19 @@
         .venture-stats::after {
             content: '';
             position: absolute;
-            bottom: -8px;
+            bottom: -10px;
             left: 0;
             width: 100%;
             height: 2px;
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
         }
 
         .venture-info {
-            font-size: 0.8rem;
-            color: #6f6f6f;
-            margin-bottom: 18px;
-            font-weight: 600;
-            letter-spacing: 0.8px;
+            font-size: 0.85rem;
+            color: #666666;
+            margin-bottom: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
             text-transform: uppercase;
         }
 
@@ -679,35 +849,35 @@
         }
 
         .venture-description {
-            font-size: 0.92rem;
-            color: #a1a1a1;
+            font-size: 0.95rem;
+            color: #999999;
             line-height: 1.6;
-            margin-bottom: 24px;
+            margin-bottom: 30px;
         }
 
         .venture-cta {
             display: inline-block;
-            padding: 10px 22px;
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 10px;
+            padding: 11px 26px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
             color: #ffffff;
             text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 0.2px;
-            transition: all 0.3s ease;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.4s ease;
         }
 
         .venture-cta:hover {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.15);
             border-color: rgba(255, 255, 255, 0.4);
         }
 
         .venture-featured-image {
             position: relative;
             overflow: hidden;
-            border-radius: 16px;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
         .venture-screenshot {
@@ -733,17 +903,31 @@
 
         .warplabs-logo,
         .venture-logo {
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             object-fit: cover;
-            filter: brightness(0.95);
+            filter: brightness(0.9);
             border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 2px solid rgba(255, 255, 255, 0.1);
             flex-shrink: 0;
         }
 
+        .warplabs-logo {
+            animation: prismRotate 20s linear infinite;
+            position: relative;
+        }
+
         .warplabs-logo::after {
-            content: none;
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: prismRotate 15s linear infinite reverse;
+            z-index: -1;
         }
 
 
@@ -755,12 +939,12 @@
         }
 
         .venture-subtitle {
-            font-size: 0.85rem;
-            color: #6f6f6f;
+            font-size: 0.9rem;
+            color: #666666;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-bottom: 12px;
-            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            font-weight: 500;
         }
 
         .venture-links {
@@ -772,14 +956,15 @@
         }
 
         .venture-social {
-            font-size: 0.85rem;
-            color: #a5a5a5;
+            font-size: 0.9rem;
+            color: #999999;
             text-decoration: none;
             transition: all 0.3s ease;
-            padding: 6px 14px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.03);
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
         }
 
         .venture-social:hover {
@@ -789,20 +974,22 @@
         }
 
         .venture-card {
-            background: #121212;
-            padding: 36px;
+            background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(32, 32, 32, 0.85) 50%, rgba(22, 22, 22, 0.9) 100%);
+            padding: 34px;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            transition: border-color 0.3s ease;
+            border-radius: 20px;
+            backdrop-filter: blur(20px) saturate(180%);
+            transition: border-color 0.3s ease, box-shadow 0.45s ease;
         }
 
         .venture-card:hover {
             border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 36px rgba(255, 255, 255, 0.05);
         }
 
         .venture-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             margin-bottom: 16px;
             color: #ffffff;
         }
@@ -818,8 +1005,8 @@
         }
 
         .venture-card p {
-            color: #bdbdbd;
-            font-size: 1rem;
+            color: #cccccc;
+            font-size: 0.95rem;
             line-height: 1.6;
         }
 
@@ -894,8 +1081,8 @@
             }
 
             .section-title {
-                font-size: 2.8rem;
-                margin-bottom: 60px;
+                font-size: 2.2rem;
+                margin-bottom: 48px;
             }
 
             .venture-featured {
@@ -913,10 +1100,6 @@
                 margin: 0 auto;
             }
 
-            .founder-photo {
-                width: 320px;
-                height: 400px;
-            }
         }
 
         /* Tablet */
@@ -928,12 +1111,6 @@
             .hero-logo {
                 max-width: 240px;
             }
-
-                         .contact-item {
-                 display: block;
-                 margin: 8px auto;
-                 max-width: 280px;
-             }
 
             .venture-featured {
                 grid-template-columns: 1fr;
@@ -958,19 +1135,8 @@
             }
 
             .section-title {
-                font-size: 2.5rem;
-                margin-bottom: 50px;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-            }
-
-            .founder-photo {
-                width: 260px;
-                height: 340px;
+                font-size: 2rem;
+                margin-bottom: 40px;
             }
 
             /* Hide particles on tablet for performance */
@@ -990,8 +1156,8 @@
             }
 
             .section-title {
-                font-size: 2rem;
-                margin-bottom: 40px;
+                font-size: 1.8rem;
+                margin-bottom: 36px;
             }
 
             .venture-featured {
@@ -1017,29 +1183,6 @@
                 font-size: 1.5rem;
             }
 
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .contact-item {
-                font-size: 0.85rem;
-                padding: 12px 15px;
-                margin: 15px auto;
-                text-align: center;
-                width: 100%;
-                max-width: none;
-                white-space: nowrap;
-                overflow: visible !important;
-                display: block !important;
-                box-sizing: border-box;
-            }
-
-            .contact-section {
-                margin-top: 40px;
-                padding: 0 15px;
-            }
-
             .footer-social {
                 flex-direction: column;
                 gap: 12px;
@@ -1049,61 +1192,6 @@
             .footer-social-link {
                 font-size: 0.75rem;
                 padding: 6px 10px;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding: 0 10px;
-                text-align: center;
-            }
-
-            .founder-photo {
-                width: 220px;
-                height: 280px;
-            }
-
-            .business-card {
-                padding: 20px 15px;
-                margin: 0 10px;
-                max-width: calc(100vw - 40px);
-                box-sizing: border-box;
-            }
-
-            .founder-name {
-                font-size: 1.8rem;
-            }
-
-            .founder-title {
-                font-size: 0.9rem;
-            }
-
-            .experience {
-                font-size: 0.95rem;
-            }
-
-            .social-links {
-                gap: 15px;
-            }
-
-            .social-link {
-                padding: 8px 15px;
-                font-size: 0.85rem;
-            }
-
-            .detail-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-            }
-
-            .detail-label {
-                font-size: 0.8rem;
-            }
-
-            .detail-value {
-                font-size: 0.9rem;
-                word-break: break-word;
             }
 
             /* Hide more particles on mobile */
@@ -1135,7 +1223,7 @@
             }
 
             .section-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
 
             .venture-featured-content h3 {
@@ -1144,21 +1232,6 @@
 
             .venture-card h3 {
                 font-size: 1.3rem;
-            }
-
-            .founder-photo {
-                width: 180px;
-                height: 230px;
-            }
-
-            .founder-name {
-                font-size: 1.6rem;
-            }
-
-            .business-card {
-                padding: 15px 10px;
-                margin: 0 5px;
-                max-width: calc(100vw - 30px);
             }
 
             /* Hide all particles on very small screens */
@@ -1195,34 +1268,6 @@
 
         ::-webkit-scrollbar-thumb:hover {
             background: #555555;
-        }
-
-        /* Copy Notification */
-        .copy-notification {
-            position: fixed;
-            top: 24px;
-            left: 50%;
-            transform: translateX(-50%) translateY(-10px);
-            background: rgba(255, 255, 255, 0.06);
-            color: #ffffff;
-            padding: 8px 14px;
-            border-radius: 999px;
-            font-weight: 500;
-            font-size: 0.75rem;
-            letter-spacing: 0.2px;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.35s ease;
-            z-index: 10000;
-            backdrop-filter: blur(8px) saturate(140%);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-        }
-
-        .copy-notification.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(0);
         }
 
         /* Accessibility - Screen reader only text */
@@ -1267,136 +1312,94 @@
     <main role="main">
         <section class="hero" role="banner">
             <div class="hero-content">
-                <img src="assets/dark-logo.png?v=2" alt="Priyam Ventures - Premium Venture Studio Logo" class="hero-logo">
-                <h1 class="visually-hidden">Priyam Ventures - Premium Venture Studio</h1>
-                <p class="hero-subtitle">Crafting Tomorrow's Innovations Today</p>
+                <div class="hero-logo-wrap">
+                    <img src="assets/dark-logo.png?v=2" alt="Priyam Ventures - Premium Venture Studio Logo" class="hero-logo">
+                    <div class="hero-logo-shine" aria-hidden="true"></div>
+                </div>
+                <h1 class="visually-hidden">Priyam Ventures</h1>
+                <p class="hero-subtitle">An internet company.</p>
+            </div>
+        </section>
 
-                <div class="contact-section">
-                    <a href="#" class="contact-item" id="email-link" data-email="mail@priyamventures.com" aria-label="Copy email address to clipboard">
-                        mail@priyamventures.com
-                    </a>
+        <section class="logos-section" role="region" aria-label="Companies that use our products">
+            <div class="container">
+                <p class="logos-eyebrow">Our products power the teams behind</p>
+                <div class="logos-row">
+                    <img src="assets/logos/hbo.svg" alt="HBO" loading="lazy">
+                    <img src="assets/logos/disney.png" alt="Disney" loading="lazy">
+                    <img src="assets/logos/mrbeast.svg" alt="MrBeast" loading="lazy">
+                    <img src="assets/logos/sidemen.svg" alt="Sidemen" loading="lazy">
+                    <img src="assets/logos/coindcx.svg" alt="CoinDCX" loading="lazy">
+                    <img src="assets/logos/growthschool.png" alt="GrowthSchool" loading="lazy">
                 </div>
             </div>
         </section>
 
         <section class="ventures-section" role="region" aria-labelledby="ventures-heading">
             <div class="container">
-                <h2 id="ventures-heading" class="section-title">Currently Venturing</h2>
-                <div class="ventures-showcase">
-                    <article class="venture-featured">
-                        <div class="venture-featured-content">
-                            <header class="venture-header">
-                                <img src="assets/vidai-logo.jpeg" alt="Vid.AI Logo" class="venture-logo">
-                                <h3><a href="https://vid.ai" target="_blank" rel="noopener noreferrer" aria-label="Visit Vid.AI - AI video generation platform">Vid.AI</a></h3>
-                            </header>
-                            <p class="venture-tagline">The best generative AI platform for creating social-media ready videos.</p>
-                            <p class="venture-stats">$1M ARR</p>
-                            <p class="venture-info">Partner Venture • Florida, USA</p>
-                            <p class="venture-description">AI video platform helping creators and teams ship social-ready content at scale.</p>
-                            <div class="venture-links">
-                                <a href="https://vid.ai" target="_blank" rel="noopener noreferrer" class="venture-cta" aria-label="Visit Vid.AI website">Visit Vid.AI →</a>
-                                <a href="https://instagram.com/vidaiofficial" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Vid.AI Instagram profile">
-                                    <span class="social-icon">📷</span> @vidaiofficial
-                                </a>
-                            </div>
-                        </div>
-                        <div class="venture-featured-image">
-                            <img src="assets/vidai.avif" alt="Vid.AI Platform Screenshot - AI video generation interface" class="venture-screenshot">
-                        </div>
-                    </article>
-                    <div class="venture-secondary">
-                        <article class="venture-card">
-                            <header class="venture-header">
-                                <img src="assets/moonn.jpg" alt="moonn Logo" class="venture-logo">
-                                <h3><a href="https://moonn.com" target="_blank" rel="noopener noreferrer" aria-label="Visit moonn - payments and courses platform">moonn</a></h3>
-                            </header>
-                            <p class="venture-subtitle">Payments &amp; Courses Platform</p>
-                            <p class="venture-stats">NEW</p>
-                            <p>An all-in-one platform for payments, community, and courses built for creators and modern businesses.</p>
-                            <div class="venture-links">
-                                <a href="https://moonn.com" target="_blank" rel="noopener noreferrer" class="venture-cta" aria-label="Visit moonn website">Visit moonn →</a>
-                            </div>
-                        </article>
-                        <article class="venture-card">
-                            <header class="venture-header">
-                                <img src="assets/tubemagic-icon-gray.png" alt="TubeMagic Logo" class="venture-logo">
-                                <h3><a href="https://tubemagic.com" target="_blank" rel="noopener noreferrer" aria-label="Visit TubeMagic - YouTube optimization platform">TubeMagic</a></h3>
-                            </header>
-                            <p class="venture-subtitle">YouTube Optimization</p>
-                            <p class="venture-stats">$600K MRR</p>
-                            <p>AI-powered workflows and optimization tools for YouTubers, previously morise.ai (founded by Priyam).</p>
-                            <div class="venture-links">
-                                <a href="https://tubemagic.com" target="_blank" rel="noopener noreferrer" class="venture-cta" aria-label="Visit TubeMagic website">Visit TubeMagic →</a>
-                            </div>
-                        </article>
-                        <article class="venture-card warplabs-card">
-                            <header class="warplabs-header">
-                                <img src="assets/warplabs.png" alt="Warplabs Logo" class="warplabs-logo">
-                                <h3><a href="https://warplabs.co" target="_blank" rel="noopener noreferrer" aria-label="Visit Warplabs - Software development portfolio">Warplabs</a></h3>
-                            </header>
-                            <p class="venture-subtitle">Software Portfolio</p>
-                            <p>Software studio delivering focused products and services for modern teams.</p>
-                            <div class="venture-links">
-                                <a href="https://warplabs.co" target="_blank" rel="noopener noreferrer" class="venture-cta" aria-label="Visit Warplabs website">Visit Warplabs →</a>
-                                <a href="https://instagram.com/warplabs.co" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Warplabs Instagram profile">
-                                    <span class="social-icon">📷</span> @warplabs.co
-                                </a>
-                                <a href="https://twitter.com/warplabs_co" target="_blank" rel="noopener noreferrer" class="venture-social" aria-label="Visit Warplabs Twitter profile">
-                                    <span class="social-icon">𝕏</span> @warplabs_co
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+                <h2 id="ventures-heading" class="section-title">Holdings</h2>
+                <ul class="holdings">
+                    <li>
+                        <a href="https://vid.ai" target="_blank" rel="noopener noreferrer" class="holding-row" aria-label="Visit Vid.AI">
+                            <img src="assets/vidai-logo.jpeg" alt="Vid.AI logo" class="holding-logo" loading="lazy">
+                            <span class="holding-info">
+                                <span class="holding-name">Vid.AI</span>
+                                <span class="holding-desc">AI video</span>
+                            </span>
+                            <span class="holding-stat">$1M ARR</span>
+                            <span class="holding-arrow">&#8599;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tubemagic.com" target="_blank" rel="noopener noreferrer" class="holding-row" aria-label="Visit TubeMagic">
+                            <img src="assets/tubemagic-icon-gray.png" alt="TubeMagic logo" class="holding-logo" loading="lazy">
+                            <span class="holding-info">
+                                <span class="holding-name">TubeMagic</span>
+                                <span class="holding-desc">YouTube optimization</span>
+                            </span>
+                            <span class="holding-stat">$600K MRR</span>
+                            <span class="holding-arrow">&#8599;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://moonn.com" target="_blank" rel="noopener noreferrer" class="holding-row" aria-label="Visit moonn">
+                            <img src="assets/moonn.jpg" alt="moonn logo" class="holding-logo" loading="lazy">
+                            <span class="holding-info">
+                                <span class="holding-name">moonn</span>
+                                <span class="holding-desc">Payments &amp; courses</span>
+                            </span>
+                            <span class="holding-stat">New</span>
+                            <span class="holding-arrow">&#8599;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://warplabs.co" target="_blank" rel="noopener noreferrer" class="holding-row" aria-label="Visit Warplabs">
+                            <img src="assets/warplabs.png" alt="Warplabs logo" class="holding-logo" loading="lazy">
+                            <span class="holding-info">
+                                <span class="holding-name holding-name-warplabs">Warplabs</span>
+                                <span class="holding-desc">Dev partner for creators</span>
+                            </span>
+                            <span class="holding-stat">Studio</span>
+                            <span class="holding-arrow">&#8599;</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <section class="about-section" role="region" aria-labelledby="about-heading">
             <div class="container">
-                <h2 id="about-heading" class="section-title">Behind the Vision</h2>
-                <div class="about-content">
-                    <div class="photo-container">
-                        <img src="assets/priyam-nyc.jpg" alt="Priyam Raj - Managing Director of Priyam Ventures" class="founder-photo">
-                    </div>
-                    <div class="business-card">
-                        <div class="card-content">
-                            <h3 class="founder-name">Priyam Raj</h3>
-                            <p class="founder-title">Managing Director</p>
-                            <p class="company-name">Priyam Ventures Private Limited</p>
-
-                            <div class="card-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Email</span>
-                                    <span class="detail-value">
-                                        <a href="#" id="personal-email-link" data-email="pr@priyamventures.com" class="email-copy-link" aria-label="Copy personal email to clipboard">pr@priyamventures.com</a>
-                                    </span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Based in</span>
-                                    <span class="detail-value">Bangalore, India</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Experience</span>
-                                    <span class="detail-value">2x Startup Exits • 6 Years Industry</span>
-                                </div>
-                            </div>
-
-                            <div class="card-footer">
-                                <nav class="social-links" role="navigation" aria-label="Priyam Raj social media links">
-                                    <a href="https://twitter.com/priymrj" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Priyam Raj Twitter profile">
-                                        <span class="social-icon">𝕏</span> @priymrj
-                                    </a>
-                                    <a href="https://instagram.com/priymrj" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Priyam Raj Instagram profile">
-                                        <span class="social-icon">📷</span> @priymrj
-                                    </a>
-                                    <a href="https://priyamraj.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Priyam Raj personal website">
-                                        <span class="social-icon">🌐</span> priyamraj.com
-                                    </a>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h2 id="about-heading" class="section-title">Team</h2>
+                <a href="https://priyamraj.com" target="_blank" rel="noopener noreferrer" class="about-content" aria-label="Visit Priyam Raj personal website">
+                    <img src="assets/priyam-nyc.jpg" alt="Priyam Raj - Managing Director of Priyam Ventures" class="founder-photo">
+                    <span class="founder-info">
+                        <span class="founder-name">Priyam Raj</span>
+                        <span class="founder-title">Managing Director</span>
+                    </span>
+                    <span class="founder-link-label">priyamraj.com</span>
+                    <span class="founder-arrow">&#8599;</span>
+                </a>
+                <p class="team-hint">&plus;6 team members</p>
             </div>
         </section>
     </main>
@@ -1405,81 +1408,41 @@
         <div class="footer-content">
             <nav class="footer-social" role="navigation" aria-label="Priyam Ventures social media links">
                 <a href="https://www.linkedin.com/company/priyamventures/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Visit Priyam Ventures LinkedIn page">
-                    <span class="footer-social-icon">💼</span> LinkedIn
+                    LinkedIn
                 </a>
                 <a href="https://twitter.com/priyamventures" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Visit Priyam Ventures Twitter profile">
-                    <span class="footer-social-icon">𝕏</span> @priyamventures
+                    @priyamventures
                 </a>
                 <a href="https://instagram.com/priyamventures" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Visit Priyam Ventures Instagram profile">
-                    <span class="footer-social-icon">📷</span> @priyamventures
+                    @priyamventures
                 </a>
             </nav>
-            <p>&copy; 2025 Priyam Ventures Private Limited. All rights reserved.</p>
-            <address>📍 WeWork Prestige Central, Infantry Road, Bengaluru, Karnataka 560001</address>
+            <p>&copy; 2026 Priyam Ventures Private Limited. All rights reserved.</p>
+            <address>WeWork Prestige Central, Infantry Road, Bengaluru, Karnataka 560001</address>
         </div>
     </footer>
 
     <script>
-        // Add smooth scrolling and additional interactive effects
         document.addEventListener('DOMContentLoaded', function() {
-            // Create more particles dynamically
-            const backgroundContainer = document.querySelector('.background-container');
+            // Scroll reveal (desktop only, respects reduced motion)
+            const canReveal = 'IntersectionObserver' in window
+                && window.innerWidth > 768
+                && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            // Logo stays clean without any filters
+            if (canReveal) {
+                const revealTargets = document.querySelectorAll('.logos-row, .section-title, .holdings li, .about-content');
+                const revealObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            revealObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-            // Email copy to clipboard functionality
-            const emailLink = document.getElementById('email-link');
-            const personalEmailLink = document.getElementById('personal-email-link');
-            
-            // Create notification element
-            const notification = document.createElement('div');
-            notification.className = 'copy-notification';
-            notification.innerHTML = '✓ Email copied to clipboard';
-            document.body.appendChild(notification);
-            
-            // Function to copy email
-            function copyEmailToClipboard(email) {
-                navigator.clipboard.writeText(email).then(() => {
-                    // Show notification
-                    notification.classList.add('show');
-                    
-                    // Hide after 2.5 seconds
-                    setTimeout(() => {
-                        notification.classList.remove('show');
-                    }, 2500);
-                }).catch(err => {
-                    console.error('Failed to copy: ', err);
-                    // Fallback method
-                    const textArea = document.createElement('textarea');
-                    textArea.value = email;
-                    document.body.appendChild(textArea);
-                    textArea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textArea);
-                    
-                    // Still show notification
-                    notification.classList.add('show');
-                    setTimeout(() => {
-                        notification.classList.remove('show');
-                    }, 2500);
-                });
-            }
-
-            // Main email button
-            if (emailLink) {
-                const email = emailLink.getAttribute('data-email');
-                emailLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    copyEmailToClipboard(email);
-                });
-            }
-
-            // Personal email in business card
-            if (personalEmailLink) {
-                const personalEmail = personalEmailLink.getAttribute('data-email');
-                personalEmailLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    copyEmailToClipboard(personalEmail);
+                revealTargets.forEach(el => {
+                    el.classList.add('reveal');
+                    revealObserver.observe(el);
                 });
             }
 
