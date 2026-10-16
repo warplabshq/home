@@ -77,11 +77,17 @@
                 },
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "WeWork Prestige Central, Infantry Road",
-                    "addressLocality": "Bengaluru",
+                    "streetAddress": "Membership No. 350, 36, WeWork Prestige Central, Infantry Road",
+                    "addressLocality": "Bangalore",
                     "addressRegion": "Karnataka",
                     "postalCode": "560001",
                     "addressCountry": "IN"
+                },
+                "location": {
+                    "@type": "Place",
+                    "name": "WeWork Prestige Central",
+                    "geo": { "@type": "GeoCoordinates", "latitude": 12.98086, "longitude": 77.60326 },
+                    "hasMap": "https://www.google.com/maps?q=12.98086,77.60326"
                 },
                 "contactPoint": {
                     "@type": "ContactPoint",
@@ -97,7 +103,7 @@
                     { "@type": "Brand", "name": "Vid.AI", "url": "https://vid.ai", "description": "Generative AI platform for creating videos" },
                     { "@type": "Brand", "name": "TubeMagic", "url": "https://tubemagic.com", "description": "AI tools that help YouTubers scale their content" },
                     { "@type": "Brand", "name": "moonn", "url": "https://moonn.com", "description": "Payments and courses platform for creators and communities" },
-                    { "@type": "Brand", "name": "Warplabs", "url": "https://warplabshq.com", "description": "Building for the Creator Economy" }
+                    { "@type": "Brand", "name": "Warplabs", "url": "https://warplabshq.com", "description": "Priyam Ventures' USA studio" }
                 ]
             },
             {
@@ -567,6 +573,136 @@
             font-weight: 500;
         }
 
+        /* ---------- Hero exit: the hero holds while film bars close, then it scrolls away ---------- */
+        .hero-stage {
+            position: relative;
+            height: 150vh;
+            height: 150svh;
+        }
+
+        .hero-stage > .hero {
+            position: sticky;
+            top: 0;
+        }
+
+        .hero-dim {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background: #000;
+            opacity: calc(var(--hp, 0) * 0.7);
+        }
+
+        .film-bar {
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 4;
+            height: 13%;
+            pointer-events: none;
+            background: #000;
+            transform: scaleY(var(--hp, 0));
+        }
+
+        .film-top { top: 0; transform-origin: top; }
+        .film-bottom { bottom: 0; transform-origin: bottom; }
+
+        .hero.tape .tape-video {
+            scale: calc(1 + var(--hp, 0) * 0.07);
+        }
+
+        /* filter/scale, not opacity/transform: those carry the entrance animations */
+        .hero .osd {
+            filter: opacity(calc(1 - var(--hp, 0) * 3));
+        }
+
+        .hero .hero-subtitle {
+            filter: opacity(calc(1 - (var(--hp, 0) - 0.15) * 2.6));
+        }
+
+        .hero .hero-logo-wrap {
+            filter: opacity(calc(1 - (var(--hp, 0) - 0.45) * 2));
+            scale: calc(1 - var(--hp, 0) * 0.06);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-stage { height: auto; }
+            .hero-stage > .hero { position: relative; }
+            .film-bar, .hero-dim { display: none; }
+        }
+
+        /* ---------- Money: odometer figures and the ticker tape ---------- */
+        .odo-num {
+            display: inline-flex;
+            line-height: 1.1;
+            vertical-align: bottom;
+        }
+
+        .odo,
+        .odo-ch {
+            display: inline-block;
+            height: 1.1em;
+        }
+
+        .odo {
+            overflow: hidden;
+        }
+
+        .odo-col {
+            display: block;
+            transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transition-delay: calc(var(--k) * 110ms + 250ms);
+        }
+
+        .odo-col > span {
+            display: block;
+            height: 1.1em;
+        }
+
+        .in .odo-col,
+        .in.odo-num .odo-col {
+            transform: translateY(calc(var(--d) * -1.1em));
+        }
+
+        .ticker {
+            margin: clamp(56px, 7vw, 88px) calc(-1 * var(--gutter)) 0;
+            overflow: hidden;
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+        }
+
+        .ticker-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 70s linear infinite;
+        }
+
+        .ticker-set {
+            display: flex;
+        }
+
+        .ticker-set span {
+            padding: 13px clamp(22px, 3vw, 40px);
+            border-right: 1px solid var(--rule);
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            color: var(--paper-dim);
+        }
+
+        .ticker-set span:first-child {
+            color: var(--paper);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .ticker-track { animation: none; }
+        }
+
         /* ---------- 02 In the field: dual marquee ---------- */
         .field {
             padding-left: 0;
@@ -747,6 +883,16 @@
             background: none;
         }
 
+        .holding-lock svg {
+            display: block;
+            width: 11px;
+            height: 13px;
+            margin-left: auto;
+            fill: none;
+            stroke: var(--paper-faint);
+            stroke-width: 1.2;
+        }
+
         .redact {
             display: inline-block;
             height: 0.82em;
@@ -853,16 +999,8 @@
         }
 
         /* ---------- 04 Contact ---------- */
-        .contact-line {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: baseline;
-            justify-content: space-between;
-            gap: 20px 48px;
-            margin-top: clamp(26px, 3.4vw, 40px);
-        }
-
         .contact-big {
+            margin-top: clamp(26px, 3.4vw, 40px);
             font-family: var(--serif);
             font-weight: 400;
             font-size: clamp(34px, 4.6vw, 60px);
@@ -875,32 +1013,89 @@
             letter-spacing: -0.01em;
         }
 
+        /* The address is the centrepiece: letters rise in, a rule draws on hover */
         .contact-mail {
+            position: relative;
             display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 0 8px;
-            border-bottom: 1px solid var(--rule-strong);
+            padding: 0;
+            border: 0;
+            background: none;
+            cursor: pointer;
+            text-align: left;
+            align-items: flex-start;
+            gap: 0.14em;
+            max-width: 100%;
+            margin-top: clamp(36px, 5vw, 64px);
             font-family: var(--italic);
             font-style: italic;
-            font-size: clamp(17px, 1.7vw, 21px);
+            font-size: min(104px, calc((100vw - 2 * var(--gutter)) / 11));
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: var(--paper);
             text-decoration: none;
-            transition: border-color 0.3s ease;
         }
 
-        .contact-mail span {
-            font-family: var(--sans);
-            font-style: normal;
-            font-size: 0.6em;
-            transition: transform 0.4s ease;
+        .contact-mail .addr {
+            display: inline-flex;
+            overflow: hidden;
+            padding: 0 0.08em 0.24em 0.02em;
+            margin-bottom: -0.16em;
         }
 
-        .contact-mail:hover {
-            border-color: var(--paper);
+        .contact-mail .ch {
+            display: inline-block;
+            white-space: pre;
+            transform: translateY(115%);
+            transition: transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+            transition-delay: calc(var(--k) * 26ms + 150ms);
         }
 
-        .contact-mail:hover span {
-            transform: translate(3px, -3px);
+        .contact-mail.in .ch {
+            transform: none;
+        }
+
+        .contact-mail.in:hover .ch {
+            animation: chHop 0.6s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--k) * 16ms);
+        }
+
+        @keyframes chHop {
+            40% { transform: translateY(-0.07em); }
+        }
+
+        .contact-mail::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background: var(--paper);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .contact-mail:hover::after,
+        .contact-mail:focus-visible::after {
+            transform: scaleX(1);
+        }
+
+        .contact-mail:focus-visible {
+            outline: none;
+        }
+
+        .contact-hint {
+            margin-top: 22px;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--paper-faint);
+            transition: color 0.3s ease;
+        }
+
+        .contact-hint.done {
+            color: var(--paper);
         }
 
         /* ---------- Footer masthead ---------- */
@@ -943,6 +1138,28 @@
             color: var(--paper);
         }
 
+        .masthead-geo {
+            margin-top: 10px;
+            font-family: 'JetBrains Mono', ui-monospace, monospace !important;
+            font-size: 11px !important;
+            letter-spacing: 0.08em;
+            line-height: 1.8 !important;
+            color: var(--paper-faint) !important;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .masthead-geo {
+            white-space: nowrap;
+        }
+
+        p.masthead-geo {
+            margin-top: 0;
+        }
+
+        a.masthead-geo:hover {
+            color: var(--paper) !important;
+        }
+
         .masthead-blurb {
             max-width: 28ch;
             font-family: var(--italic);
@@ -975,7 +1192,8 @@
 
         /* One-line wordmark closing the page, in the logo's own cut (Playfair Display SemiBold) */
         .masthead-word {
-            margin: clamp(24px, 3.4vw, 40px) 0 -0.19em;
+            margin: clamp(84px, 7.5vw, 108px) 0 0;
+            padding: 0.04em 0 0.26em; /* room for the p and y descenders, which the light is clipped to */ /* room for the music pill to rest above it */
             font-family: var(--serif);
             font-weight: 600;
             font-size: min(11.5vw, 156px);
@@ -985,6 +1203,28 @@
             text-align: center;
             color: rgba(236, 231, 220, 0.84);
             user-select: none;
+        }
+
+        /* Footer wordmark: rises into place, then a soft light drifts across it (or follows the cursor) */
+        @property --mx { syntax: '<percentage>'; inherits: false; initial-value: 50%; }
+        @property --my { syntax: '<percentage>'; inherits: false; initial-value: 60%; }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .masthead-word {
+                color: transparent;
+                background-image: radial-gradient(circle max(180px, 22vw) at var(--mx) var(--my),
+                    rgba(236, 231, 220, 0.96) 0%,
+                    rgba(236, 231, 220, 0.5) 45%,
+                    rgba(236, 231, 220, 0.16) 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                transform: translateY(42%);
+                transition: transform 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+
+            .masthead-word.risen {
+                transform: none;
+            }
         }
 
         /* Hero video: tighter crop, black and white, darker where the title sits */
@@ -1159,7 +1399,8 @@
                 grid-template-columns: 1fr 1fr;
             }
 
-            .masthead-grid > :first-child {
+            .masthead-grid > :first-child,
+            .masthead-grid > :last-child {
                 grid-column: 1 / -1;
             }
         }
@@ -1213,11 +1454,15 @@
 
 <body>
     <main>
+        <div class="hero-stage">
         <section class="hero tape" id="tape">
             <video class="tape-video" id="tapeVideo" src="assets/hero-vhs.mp4" poster="assets/hero-vhs.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
             <div class="tape-grade" aria-hidden="true"></div>
             <div class="tape-scan" aria-hidden="true"></div>
             <div class="tape-track" aria-hidden="true"></div>
+            <div class="hero-dim" aria-hidden="true"></div>
+            <div class="film-bar film-top" aria-hidden="true"></div>
+            <div class="film-bar film-bottom" aria-hidden="true"></div>
             <div class="osd" aria-hidden="true">
                 <span class="tr">PVPL</span>
                 <span class="bl" id="osdDate"></span>
@@ -1231,20 +1476,27 @@
                 <p class="hero-subtitle">An internet company.</p>
             </div>
         </section>
+        </div>
 
         <section class="section record" id="record" aria-labelledby="record-title">
             <div class="wrap">
                 <p class="kicker" data-reveal>Revenue</p>
                 <h2 class="visually-hidden" id="record-title">Revenue</h2>
                 <div class="record-figure">
-                    <span class="record-big" data-reveal>$5M+</span>
+                    <span class="record-big" data-reveal data-odo>$5M+</span>
                     <p class="record-caption" data-reveal style="--i: 1">in SaaS &amp; app revenue generated for creators.</p>
                 </div>
                 <ul class="stats">
-                    <li data-reveal style="--i: 0"><span class="stat-num">$1M</span><span class="stat-label">ARR<span class="stat-sep"> &middot; </span><span class="stat-of">Vid.AI</span></span></li>
-                    <li data-reveal style="--i: 1"><span class="stat-num" data-count="600" data-prefix="$" data-suffix="K">$600K</span><span class="stat-label">MRR<span class="stat-sep"> &middot; </span><span class="stat-of">TubeMagic</span></span></li>
-                    <li data-reveal style="--i: 2"><span class="stat-num">7</span><span class="stat-label">People</span></li>
+                    <li data-reveal style="--i: 0"><span class="stat-num" data-odo>$1M</span><span class="stat-label">ARR<span class="stat-sep"> &middot; </span><span class="stat-of">Vid.AI</span></span></li>
+                    <li data-reveal style="--i: 1"><span class="stat-num" data-odo>$600K</span><span class="stat-label">MRR<span class="stat-sep"> &middot; </span><span class="stat-of">TubeMagic</span></span></li>
+                    <li data-reveal style="--i: 2"><span class="stat-num" data-odo>7</span><span class="stat-label">People</span></li>
                 </ul>
+            </div>
+            <div class="ticker" aria-hidden="true">
+                <div class="ticker-track">
+                    <div class="ticker-set"><span>PVPL &#9650;</span><span>$5M+ creator revenue</span><span>Vid.AI &middot; ARR $1M &#9650;</span><span>TubeMagic &middot; MRR $600K &#9650;</span><span>moonn &middot; New</span><span>Warplabs &middot; USA</span><span>BLR 12&deg;58&prime;N 77&deg;36&prime;E</span></div>
+                    <div class="ticker-set"><span>PVPL &#9650;</span><span>$5M+ creator revenue</span><span>Vid.AI &middot; ARR $1M &#9650;</span><span>TubeMagic &middot; MRR $600K &#9650;</span><span>moonn &middot; New</span><span>Warplabs &middot; USA</span><span>BLR 12&deg;58&prime;N 77&deg;36&prime;E</span></div>
+                </div>
             </div>
         </section>
 
@@ -1362,29 +1614,29 @@
                         </a>
                     </li>
                     <li data-reveal style="--i: 3">
-                        <div class="holding holding-redacted" aria-label="Unannounced product">
+                        <div class="holding holding-redacted" aria-label="Private product">
                             <span class="holding-no">04</span>
                             <span class="holding-name"><i class="redact" style="width: 9.5ch"></i></span>
                             <span class="holding-desc"><i class="redact" style="width: 14ch"></i></span>
-                            <span class="holding-metric"><small>Coming soon</small></span>
+                            <span class="holding-metric holding-lock" title="Private"><svg viewBox="0 0 12 14" aria-hidden="true"><rect x="1" y="6" width="10" height="7.5" rx="1.2"/><path d="M3.5 6V4.2a2.5 2.5 0 0 1 5 0V6"/></svg></span>
                             <span></span>
                         </div>
                     </li>
                     <li data-reveal style="--i: 4">
-                        <div class="holding holding-redacted" aria-label="Unannounced product">
+                        <div class="holding holding-redacted" aria-label="Private product">
                             <span class="holding-no">05</span>
                             <span class="holding-name"><i class="redact" style="width: 7ch"></i></span>
                             <span class="holding-desc"><i class="redact" style="width: 18ch"></i></span>
-                            <span class="holding-metric"><small>Coming soon</small></span>
+                            <span class="holding-metric holding-lock" title="Private"><svg viewBox="0 0 12 14" aria-hidden="true"><rect x="1" y="6" width="10" height="7.5" rx="1.2"/><path d="M3.5 6V4.2a2.5 2.5 0 0 1 5 0V6"/></svg></span>
                             <span></span>
                         </div>
                     </li>
                     <li data-reveal style="--i: 5">
-                        <div class="holding holding-redacted holding-trail" aria-label="Unannounced product">
+                        <div class="holding holding-redacted holding-trail" aria-label="Private product">
                             <span class="holding-no">06</span>
                             <span class="holding-name"><i class="redact" style="width: 11ch"></i></span>
                             <span class="holding-desc"><i class="redact" style="width: 12ch"></i></span>
-                            <span class="holding-metric"></span>
+                            <span class="holding-metric holding-lock" title="Private"><svg viewBox="0 0 12 14" aria-hidden="true"><rect x="1" y="6" width="10" height="7.5" rx="1.2"/><path d="M3.5 6V4.2a2.5 2.5 0 0 1 5 0V6"/></svg></span>
                             <span></span>
                         </div>
                     </li>
@@ -1393,7 +1645,7 @@
                             <span class="holding-no">07</span>
                             <span class="holding-name"><i class="redact" style="width: 8ch"></i></span>
                             <span class="holding-desc"><i class="redact" style="width: 16ch"></i></span>
-                            <span class="holding-metric"><small>&middot;&nbsp;&middot;&nbsp;&middot;</small></span>
+                            <span class="holding-metric holding-lock" title="Private"><svg viewBox="0 0 12 14" aria-hidden="true"><rect x="1" y="6" width="10" height="7.5" rx="1.2"/><path d="M3.5 6V4.2a2.5 2.5 0 0 1 5 0V6"/></svg></span>
                             <span></span>
                         </div>
                     </li>
@@ -1403,7 +1655,7 @@
                     <svg class="owned-mark" viewBox="330 330 420 420" aria-hidden="true"><g><path id="wl-spoke" d="M500.5 344 L579.5 344 L574 461 A86 86 0 0 0 506 461 Z"/><use href="#wl-spoke" transform="rotate(60 540 540)"/><use href="#wl-spoke" transform="rotate(120 540 540)"/><use href="#wl-spoke" transform="rotate(180 540 540)"/><use href="#wl-spoke" transform="rotate(240 540 540)"/><use href="#wl-spoke" transform="rotate(300 540 540)"/></g></svg>
                     <span>
                         <span class="owned-name">Warplabs</span>
-                        <span class="owned-line" style="display: block">Building for the Creator Economy</span>
+                        <span class="owned-line" style="display: block">Our USA studio</span>
                     </span>
                     <span class="owned-link">warplabshq.com &#8599;</span>
                 </a>
@@ -1413,10 +1665,9 @@
         <section class="section contact" aria-labelledby="contact-title">
             <div class="wrap">
                 <p class="kicker" data-reveal>Contact</p>
-                <div class="contact-line">
-                    <h2 class="contact-big" id="contact-title" data-reveal style="--i: 1">Say <em>hello.</em></h2>
-                    <a class="contact-mail" id="contactMail" href="#" data-reveal style="--i: 2">mail<!-- -->@<!-- -->priyamventures.com <span aria-hidden="true">&#8599;</span></a>
-                </div>
+                <h2 class="contact-big" id="contact-title" data-reveal style="--i: 1">Say <em>hello.</em></h2>
+                <button type="button" class="contact-mail" id="contactMail" data-reveal style="--i: 2"><span class="addr">mail<!-- -->@<!-- -->priyamventures.com</span></button>
+                <p class="contact-hint" id="contactHint" data-reveal style="--i: 3" aria-live="polite">Click to copy</p>
             </div>
         </section>
     </main>
@@ -1443,7 +1694,9 @@
                 </nav>
                 <div>
                     <p class="masthead-label">Office</p>
-                    <address>WeWork Prestige Central<br>Infantry Road, Bengaluru<br>Karnataka 560001</address>
+                    <address>Membership No. 350<br>36, WeWork Prestige Central<br>Infantry Road, Bangalore<br>KA 560001</address>
+                    <a class="masthead-geo" href="https://www.google.com/maps?q=12.98086,77.60326" target="_blank" rel="noopener noreferrer">12&deg;58&prime;51&Prime;&thinsp;N &nbsp;77&deg;36&prime;12&Prime;&thinsp;E</a>
+                    <p class="masthead-geo">BLR &middot; <span id="blrTime">IST</span></p>
                 </div>
             </div>
             <div class="masthead-legal">
@@ -1540,7 +1793,33 @@
 
             // Assembled at runtime so the address isn't sitting in the markup for scrapers.
             var mail = ['mail', 'priyamventures.com'].join('@');
-            document.getElementById('contactMail').href = 'mailto:' + mail;
+            var mailEl = document.getElementById('contactMail');
+            var hint = document.getElementById('contactHint');
+            mailEl.setAttribute('aria-label', 'Copy email address ' + mail);
+            // One span per letter so they can rise in and ripple on hover
+            var addr = mailEl.querySelector('.addr');
+            addr.setAttribute('aria-hidden', 'true');
+            addr.innerHTML = mail.split('').map(function (c, k) {
+                return '<span class="ch" style="--k: ' + k + '">' + c + '</span>';
+            }).join('');
+            var resetHint = null;
+            function copied() {
+                hint.textContent = 'Copied to clipboard';
+                hint.classList.add('done');
+                clearTimeout(resetHint);
+                resetHint = setTimeout(function () { hint.textContent = 'Click to copy'; hint.classList.remove('done'); }, 2000);
+            }
+            function fallbackCopy() {
+                var t = document.createElement('textarea');
+                t.value = mail; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+                document.body.appendChild(t); t.select();
+                try { if (document.execCommand('copy')) copied(); } catch (e) {}
+                document.body.removeChild(t);
+            }
+            mailEl.addEventListener('click', function () {
+                if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(mail).then(copied, fallbackCopy);
+                else fallbackCopy();
+            });
 
             if (reduce || !('IntersectionObserver' in window)) {
                 revealEls.forEach(function (el) { el.classList.add('in'); });
@@ -1578,6 +1857,165 @@
             }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
 
             revealEls.forEach(function (el) { io.observe(el); });
+        })();
+    </script>
+
+    <script>
+        // Money figures roll in like an odometer (digits pass through 0-9 once, then land).
+        (function () {
+            function build() { document.querySelectorAll('[data-odo]').forEach(function (el) {
+                var text = el.textContent.trim();
+                var k = 0;
+                // Width of each digit as plain text (tracking included), so the rolled figure sets exactly like the static one
+                var size = parseFloat(getComputedStyle(el).fontSize) || 16;
+                function em(c) {
+                    var probe = document.createElement('span');
+                    probe.textContent = c;
+                    el.appendChild(probe);
+                    var w = probe.getBoundingClientRect().width / size;
+                    el.removeChild(probe);
+                    return w.toFixed(4) + 'em';
+                }
+                el.setAttribute('aria-label', text);
+                el.innerHTML = '<span class="odo-num" aria-hidden="true">' + text.split('').map(function (c) {
+                    if (!/[0-9]/.test(c)) return '<span class="odo-ch">' + c + '</span>';
+                    var rows = '';
+                    for (var n = 0; n < 20; n++) rows += '<span>' + (n % 10) + '</span>';
+                    return '<span class="odo" style="width: ' + em(c) + '"><span class="odo-col" style="--d: ' + (10 + +c) + '; --k: ' + (k++) + '">' + rows + '</span></span>';
+                }).join('') + '</span>';
+            }); }
+            // Measure with the real typeface, not the fallback
+            if (document.fonts && document.fonts.ready) document.fonts.ready.then(build); else build();
+        })();
+
+        // Hero exit: progress through the pinned stage drives the film bars and fades.
+        (function () {
+            var stage = document.querySelector('.hero-stage');
+            var hero = document.getElementById('tape');
+            if (!stage || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            var queued = false;
+            function update() {
+                queued = false;
+                var range = stage.offsetHeight - window.innerHeight;
+                var p = range > 0 ? Math.min(1, Math.max(0, window.scrollY / range)) : 0;
+                hero.style.setProperty('--hp', p.toFixed(4));
+            }
+            function queue() { if (!queued) { queued = true; requestAnimationFrame(update); } }
+            window.addEventListener('scroll', queue, { passive: true });
+            window.addEventListener('resize', queue);
+            update();
+        })();
+
+        // Logo strips and ticker speed up while scrolling and settle after; logos brighten near the cursor.
+        (function () {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            var anims = [];
+            document.querySelectorAll('.marquee-track, .ticker-track').forEach(function (t) {
+                if (t.getAnimations) anims = anims.concat(t.getAnimations());
+            });
+            var lastY = window.scrollY, lastT = performance.now(), boost = 0, rate = 1, running = false;
+            function step() {
+                boost *= 0.9;
+                rate += (1 + boost - rate) * 0.12;
+                anims.forEach(function (a) { a.playbackRate = rate; });
+                if (boost > 0.01 || Math.abs(rate - 1) > 0.01) requestAnimationFrame(step);
+                else { anims.forEach(function (a) { a.playbackRate = 1; }); running = false; }
+            }
+            window.addEventListener('scroll', function () {
+                var now = performance.now();
+                var v = Math.abs(window.scrollY - lastY) / Math.max(16, now - lastT);
+                lastY = window.scrollY; lastT = now;
+                boost = Math.min(5, Math.max(boost, v * 3));
+                if (!running && anims.length) { running = true; requestAnimationFrame(step); }
+            }, { passive: true });
+
+            var strip = document.querySelector('.marquees');
+            if (!strip) return;
+            var items = [].slice.call(strip.querySelectorAll('.marquee-set li'));
+            var mx = null, my = 0, raf = 0;
+            function glow() {
+                raf = 0;
+                if (mx === null) return;
+                items.forEach(function (li) {
+                    var r = li.getBoundingClientRect();
+                    if (r.right < 0 || r.left > window.innerWidth) return;
+                    var d = Math.hypot(r.left + r.width / 2 - mx, r.top + r.height / 2 - my);
+                    li.style.opacity = (0.42 + 0.58 * Math.max(0, 1 - d / 240)).toFixed(3);
+                });
+            }
+            strip.addEventListener('pointermove', function (e) {
+                if (e.pointerType !== 'mouse') return;
+                mx = e.clientX; my = e.clientY;
+                if (!raf) raf = requestAnimationFrame(glow);
+            });
+            strip.addEventListener('pointerleave', function () {
+                mx = null;
+                items.forEach(function (li) { li.style.opacity = ''; });
+            });
+        })();
+    </script>
+
+    <script>
+        // Bangalore local time in the footer
+        (function () {
+            var el = document.getElementById('blrTime');
+            if (!el || !window.Intl) return;
+            var fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hour12: false });
+            function tick() { el.textContent = fmt.format(new Date()) + ' IST'; }
+            tick();
+            setInterval(tick, 15000);
+        })();
+    </script>
+
+    <script>
+        // Footer wordmark: rise on arrival; light follows the cursor, or drifts on its own.
+        (function () {
+            var word = document.querySelector('.masthead-word');
+            if (!word || !window.IntersectionObserver) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            var foot = word.parentElement;
+            var score = document.getElementById('score');
+            var scoreGap = score ? parseFloat(getComputedStyle(score).bottom) || 0 : 0;
+            var x = 50, y = 60, tx = 50, ty = 60, pointer = false, visible = false, running = false;
+            var t0 = performance.now();
+
+            new IntersectionObserver(function (entries) {
+                visible = entries[0].isIntersecting;
+                if (visible) {
+                    word.classList.add('risen');
+                    if (!running) { running = true; requestAnimationFrame(tick); }
+                }
+            }, { threshold: 0.15 }).observe(word);
+
+            foot.addEventListener('pointermove', function (e) {
+                if (e.pointerType !== 'mouse') return;
+                var r = word.getBoundingClientRect();
+                tx = (e.clientX - r.left) / r.width * 100;
+                ty = (e.clientY - r.top) / r.height * 100;
+                pointer = true;
+            });
+            foot.addEventListener('pointerleave', function () { pointer = false; });
+
+            function lift() {
+                if (!score) return;
+                var over = window.innerHeight - word.getBoundingClientRect().top - scoreGap + 14;
+                score.style.transform = over > 0 ? 'translateY(' + (-over).toFixed(1) + 'px)' : '';
+            }
+
+            function tick(now) {
+                lift();
+                if (!visible) { running = false; return; }
+                if (!pointer) {
+                    var t = (now - t0) / 1000;
+                    tx = 50 + 44 * Math.sin(t * 0.32);
+                    ty = 55 + 18 * Math.sin(t * 0.71);
+                }
+                x += (tx - x) * 0.07;
+                y += (ty - y) * 0.07;
+                word.style.setProperty('--mx', x.toFixed(2) + '%');
+                word.style.setProperty('--my', y.toFixed(2) + '%');
+                requestAnimationFrame(tick);
+            }
         })();
     </script>
 
